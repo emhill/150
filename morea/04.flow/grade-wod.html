@@ -1,0 +1,43 @@
+<script src="/150/js/Chart.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="grade-wod3"></canvas>
+      </div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Create variables, print them, and use them in arithmetic calculations. Determine the types of variables and what values result from basic arithmetic expressions. 
+“Excellent” indicates the submission was correct &amp; on time, “Satisfactory” is correct but late or includes some minor mistake if on time, and “Unsatisfactory” represents an incorrect submission. A score of 6 is excellent, 5 satisfactory, and 1-4 unsatisfactory (needs improvement).</p>
+
+  </div>
+
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory", "No submission"],
+      datasets: [ { data: [6, 13, 3, 8] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("grade-wod3").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
+
+
+</div>

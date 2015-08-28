@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> PHW7 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-hw7-go-with-the-control-flow">Practice HW7: Go with the (control) flow</h1>
+
+<p>Rather than writing a program, in this practice HW you will walk through the execution of a program on paper. <strong><em>You don’t need to run the program to complete the assignment.</em></strong></p>
+
+<!--<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <20 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 20-40 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 40-60 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 60+ min</span>
+</span>
+-->
+
+<h2 id="exercise-loopypy">Exercise: loopy.py</h2>
+
+<p>Take a look at <a href="loopy.pdf">loopy.py</a> and the output from a sample run. Each line of code in loopy.py is given a line number to the left. Given this sample run, in what order are the statements executed? List the line numbers in the order that they are executed. <em>Hint</em>: not all line numbers need to be included, and some line numbers may appear multiple times.</p>
+
+<p>Make sure you can answer the following questions:</p>
+
+<ol>
+  <li>What is the first line executed?</li>
+  <li>What is the last line executed?</li>
+  <li>Is each function fruitful or void?</li>
+</ol>
+
+<!--## Demonstration
+
+*Coming soon...*
+
+Once you've finished doing the WOD a single time, you can watch me do it:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/0BPlMXkwdcY" frameborder="0" allowfullscreen></iframe>
+</div>-->
+
+<!--## Solution
+
+Order that the lines are executed:
+
+	34, 35, 36 get_area(+,+)
+		5, 6, 7
+	
+	36, 38 rectangle_outline
+		21, 22, 24, 25 draw_line(25)
+			16, 25 * (17, 18), 19
+	23 * (	22, 24, 28, 29, 23 * (30, 31), 32	)
+		22, 24, 25 draw_line(25)
+			16, 25 * (17, 18), 19 
+
+	40 get_area(-,+)
+		5, 6, 8, 9, 10, 11, 14
+
+	41 get_area(+,-)
+		5, 6, 8, 9, 10, 12, 13, 14
+
+	43, 44 draw_line
+		16, 17, 19
+	43, 44, 16, 1 * (17, 18), 19
+	43, 44, 16, 2 * (17, 18), 19
+	43, 44, 16, 3 * (17, 18), 19
+	43, 44, 16, 4 * (17, 18), 19
+	43
+
+Questions:
+
+1. 34
+1. 43 or 19
+2. Fruitful or void?
+    * get_area:		fruitful
+	* draw_line:		void
+	* rectangle_outline:	void
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.-->
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

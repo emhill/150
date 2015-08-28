@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Project 3 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="project-3-image-manipulation">Project 3: Image Manipulation</h1>
+
+<p>In this project you will have the opportunity to programmatically manipulate png image files with python.</p>
+
+<p>First, download <a href="project3.zip">project3.zip</a> and unzip it. You should see the following files:</p>
+
+<ul>
+  <li><strong>Test images</strong>: <code>arch.png</code>, <code>hmcOlinSmall.png</code>, <code>in.png</code>, <code>out.png</code>, <code>spam.png</code>, <code>trees.png</code></li>
+  <li>Programs:
+    <ul>
+      <li><code>image_fun.py</code>: where you will write your project code</li>
+      <li><code>png.py</code>: library to work with png files <strong>DO NOT MODIFY</strong></li>
+      <li><code>png_helper.py</code>: helper functions to manipulate png files <strong>DO NOT MODIFY</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Rename the folder</strong> so that it is <code>project3_uLogin</code> rather than just <code>project3</code>. If you are working with a partner, make sure both uLogins are listed.</p>
+
+<p>Next, try running the code: <code>python image_fun.py</code>. <strong>Make sure to run with python, NOT python3.</strong> If successful, when you <code>ls</code> you should see a new file, <code>out2.png</code>. Open <code>out2.png</code> and <code>out.png</code> to make sure they look the same:</p>
+
+<ul>
+  <li><strong>On mac:</strong> <code>open out.png out2.ong</code></li>
+  <li><strong>On VirtualBox:</strong> <code>eog out.png out2.png &amp;</code></li>
+</ul>
+
+<h2 id="understanding-invert">Understanding <code>invert</code></h2>
+
+<p>Read over the <code>invert</code> function in <code>image_fun.py</code> to see how it works. At the bottom of the file, change the call to invert to use the <code>in.png</code> image: <img src="in.png" />. Once inverted, it should look like: <img src="out.png" />. Similarly:</p>
+
+<p><img src="hmcOlinSmall.png" width="200" /> <img src="outOlin.png" width="200" /></p>
+
+<p>The <code>invert</code> function modifies an image to create its negative. That is, all color values are 255 minus their original value. Especially note the use of list comprehension in <code>invert</code>, which iterates over every pixel in the image and calls <code>change(rgb values)</code>. It’s easiest to also write greyscale and binarize in the same format: a main function that accepts user input and contains a list comprehension that calls a helper function, <code>change</code>, on each pixel. </p>
+
+<h2 id="playing-with-pixels">Playing with Pixels</h2>
+
+<h3 id="grayscale">grayscale</h3>
+
+<p>Write a function called <code>grayscale</code> that modifies an image to make it grayscale. For this, you’ll want to do something similar to <code>invert</code>, except that your new change function will calculate the <a href="http://en.wikipedia.org/wiki/Luminance_(relative)">luminance</a> of the pixel. For example:</p>
+
+<p><img src="spamin.png" width="200" /> <img src="spamout.png" width="200" /></p>
+
+<!--As Wikipedia calculates it, luminance is 21% red, 72% green, and 7% blue. Intuitively, this makes sense because if you think of standard red, green, and blue, green is the lightest and thus has highest positive impact luminance, while blue is darker and has a lower value for luminance. -->
+
+<p>Since luminance is an indication of how white/black a pixel is, having your helper function return a list of RGB values in greyscale is easy – just return the same value in each of the three color channels! How much gray? You can use the following equation for luminance:</p>
+
+<pre><code>Gray = 0.2126 * Red + 0.7152 * Green + 0.0722 * Blue
+</code></pre>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>Getting an <strong>OverflowError: unsigned byte integer is greater than maximum</strong>? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1.</li>
+  <li>Getting a <strong>filename is not defined</strong> error? Make sure you have single quotes around the image name when you call it in Python shell, the image is in the same folder as your python script, and permissions on your image are correct. </li>
+</ul>
+
+<h3 id="binarize">binarize</h3>
+
+<p>Write a function called <code>binarize</code>, which binarizes an image (makes it black and white) with a threshold <code>thresh</code> given by the user as a parameter. This threshold is a brightness value between 0 and 255 - if a pixel is greater than the threshold value, then it should turn white, and if its less than the threshold value, then it should turn black. So, a threshold value of 0 means that your photo will turn white and a threshold of 255 means your photo will turn black. For example:</p>
+
+<p><img src="spamin.png" width="200" /> <img src="binaryspam.png" width="200" /></p>
+
+<h2 id="geometric-transformations">Geometric Transformations</h2>
+
+<h3 id="flipvert">flipVert</h3>
+
+<p>Write a function called <code>flipVert</code>, which flips the image on its horizontal axis (the bottom is on the top and the top is on the bottom). For example:</p>
+
+<p><img src="in.png" /> <img src="out2.png" /></p>
+
+<p>You will use the same basic structure as the earlier problems–one main function that opens the file and calls the helper function in a list comprehension.</p>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>In <code>flipVert</code>, you’ll want to iterate over only the rows instead of the pixels in <code>Im_pix</code> and reverse their order. </li>
+  <li>If <code>L</code> is a list, then <code>L[::-1]</code> is the reverse of that list. </li>
+</ul>
+
+<h3 id="fliphoriz">flipHoriz</h3>
+
+<p>Write a function <code>flipHoriz</code> that flips the image on its vertical axis. This should work in the same way as <code>flipVert</code> but flip in the horizontal direction. For example:</p>
+
+<!--<img src="spamin.png" width="200">-->
+<p><img src="fliphspam.png" width="200" /></p>
+
+<p>Instead of reordering the rows, you want to consider how the pixels in the rows reorder when an image is flipped horizontally. Note: flipping <code>in.png</code> horizontally has no effect because it is symmetric about the vertical axis.</p>
+
+<h3 id="mirrorvert">mirrorVert</h3>
+
+<p>Write a function <code>mirrorVert</code> that mirrors the image across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). The easiest approach is to replace the bottom half of <code>Im_pix</code> with the reversed rows from the top half. To do this, you’ll use the built-in function <code>getWH()</code> in <code>png_helper.py</code> to get the height of <code>Im_pix</code>. For example:</p>
+
+<p><img src="in.png" /> <img src="mirrorV.png" /></p>
+
+<p>Warning: You cannot create a copy of a list with <code>list1 = list2</code>, because instead of creating a new object, Python will just create a new reference to the old list. However, list slicing does create new copies of data, so consider how you could combine two slices, each of half the size of the original list, in order to mirror the image…</p>
+
+<h3 id="mirrorhoriz">mirrorHoriz</h3>
+
+<p>Write a function <code>mirrorHoriz</code> that mirrors the image across its vertical axis. This should work similar to <code>mirrorVert</code>, but instead of replacing the bottom rows with the reversed top rows (as you did in <code>mirrorVert</code>), you’ll replace the last half of the pixels in every row with the reversed first half of the pixels. For example:</p>
+
+<!--<img src="spamin.png" width="200">-->
+<p><img src="mirrorH.png" width="200" /></p>
+
+<p><em>(The bigger question: which side of the SPAM can do you open?)</em></p>
+
+<h2 id="extra-credit">Extra Credit</h2>
+
+<h3 id="scale">scale</h3>
+
+<p>Write a function <code>scale that</code> scales the image to half of each of its original dimensions (this will be a quarter of its original area). The easiest way to do this is to eliminate every other pixel in each row (scaling the image horizontally) <strong>and</strong> eliminate every other row (scaling the image vertically). </p>
+
+<h3 id="free-style">Free style</h3>
+
+<p>Make your own transformations! Make sure to comment.</p>
+
+<h2 id="submission">Submission</h2>
+
+<p>Make sure your <code>image_fun.py</code> file contains 7 additional functions: <code>grayscale</code>, <code>binarize</code>, <code>flipVert</code>, <code>flipHorz</code>, <code>mirrorVert</code>, <code>mirrorHoriz</code>, and <code>scale</code>. Be sure to test them all at the bottom of the file. <strong>Please make your output filenames are consistent.</strong> For example, if your input image file is <code>x.png</code>, name your output <code>x_out.png</code>. <strong>Please remove your output files before submitting.</strong></p>
+
+<p>Make sure you’ve added your name to the comments at the top of the file, that your program contains comments and follows good programming style.</p>
+
+<p>Once you’re satisfied that your programs are working correctly, zip it for submission:</p>
+
+<ul>
+  <li><code>cd ..</code></li>
+  <li><code>zip project3_uLogin.zip project3_uLogin/*</code></li>
+</ul>
+
+<p><em>Assignment adapted from <a href="https://www.cs.hmc.edu/twiki/bin/view/CS5/FunWithImagesGold2010">Harvey Mudd’s CS 5 Fun with Images</a>.</em></p>
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Project 1 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="project-1-using-strings--functions">Project 1: Using Strings &amp; Functions</h1>
+<!--
+<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <10 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 10-20 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 20-30 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 30+ min</span>
+</span>
+-->
+
+<h2 id="setup">Setup</h2>
+
+<ul>
+  <li><code>mkdir project1_uLogin</code></li>
+  <li><code>cd project1_uLogin</code></li>
+  <li><code>touch bye.py convert.py fun.py string.py</code></li>
+</ul>
+
+<p><em>Don’t forget to add a comment at the top of each program with your name and what the program does.</em></p>
+
+<h2 id="byepy">bye.py</h2>
+
+<ol>
+  <li>Edit the file (<code>ped bye.py</code>):
+    <ol>
+      <li>Create a variable to store your last name</li>
+      <li>Print “Goodbye, …!” and replace the ellipsis (…) with the variable that is storing your last name.</li>
+      <li>Add a comment at the top of the file that explains what your program does.</li>
+    </ol>
+  </li>
+  <li>Run your python program: <code>python3 bye.py</code></li>
+  <li>Copy your python file <code>bye.py</code> to <code>byebye.py</code>.</li>
+</ol>
+
+<h2 id="convertpy">convert.py</h2>
+
+<p>Create a program <code>convert.py</code>, that takes a fahrenheit temperature as input and outputs the equivalent temperature in celsius. Your program should have 2 variables:</p>
+
+<ul>
+  <li><code>degrees_f</code>: holds a temperature in degrees fahrenheit (input from the user)</li>
+  <li><code>degrees_c</code>: holds the temperature in degrees celsius. To convert fahrenheit to celsius, deduct 32 from the fahrenheit temperature and multiply by 5/9.</li>
+</ul>
+
+<p>Your program shold print the values of both variables with a string description, such as: <code>"F degrees fahrenheit = C degrees celsius"</code>, replacing F &amp; C with the values of your variables.</p>
+
+<p>For example:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>degrees_f</strong></th>
+      <th style="text-align: center"><strong>degrees_c</strong></th>
+      <th style="text-align: center"><strong>output</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">86</td>
+      <td style="text-align: center">30</td>
+      <td style="text-align: center">86 degrees fahrenheit = 30 degrees celsius</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">72</td>
+      <td style="text-align: center">22</td>
+      <td style="text-align: center">72 degrees fahrenheit = 22 degrees celsius</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">32</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">32 degrees fahrenheit = 0 degrees celsius</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="funpy">fun.py</h2>
+
+<p>Write a program <code>fun.py</code> that takes a number as input from the user and prints out the following information using the math module:</p>
+
+<ol>
+  <li>The ceiling of the number (e.g., <code>ceiling(3.75)</code> is 4)</li>
+  <li>The number rounded to 0 decimal places</li>
+  <li>The factorial of the rounded number</li>
+</ol>
+
+<h2 id="stringpy">string.py</h2>
+
+<p>Write a program <code>string.py</code> that takes a string as input from the user and prints the string after performing the following two mangle operations:</p>
+
+<ol>
+  <li>Swaps upper and lower case letters</li>
+  <li>Removes the second and second to last characters</li>
+</ol>
+
+<p>Finally, print only the middle 3 letters using the substring or splice operation (<code>[:]</code>).</p>
+
+<p>For example:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>string</strong></th>
+      <th style="text-align: center"><strong>Mangled Output</strong></th>
+      <th style="text-align: center"><strong>Middle 3</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Monty Python</td>
+      <td style="text-align: center">mNTY pYTHN</td>
+      <td style="text-align: center">y P</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">hello</td>
+      <td style="text-align: center">HLL</td>
+      <td style="text-align: center">ell</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="submission">Submission</h2>
+
+<p>Once you’re satisfied that your programs are working correctly, zip it for submission:</p>
+
+<ul>
+  <li><code>cd ..</code></li>
+  <li><code>zip project1_uLogin.zip project1_uLogin/*</code></li>
+</ul>
+
+<p>Upload your zip file to Google Classroom.</p>
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

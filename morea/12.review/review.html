@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> PHW14 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-phw14-final-exam-review">Practice PHW14: Final Exam Review</h1>
+
+<!--<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <45 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 45-90 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 90-135 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 135+ min</span>
+</span>
+-->
+
+<h2 id="statpy">stat.py</h2>
+
+<p>Create a program <code>stat.py</code> that finds the mean, median, and mode in a list of numbers read in from a file <code>numbers.txt</code>. Do <strong>not</strong> use the python statistics package. Some definitions:</p>
+
+<ul>
+  <li><strong>mean</strong>: the sum of the numbers divided by the number of numbers.</li>
+  <li><strong>median</strong>: the middle number in a sorted list of numbers. If there is an even number of numbers, the median is the average of the middle two numbers.</li>
+  <li><strong>mode</strong>: the most frequently occurring number.</li>
+</ul>
+
+<p><strong><em>Recommended Development Steps:</em></strong></p>
+
+<ol>
+  <li>Instead of reading in from a file, create a list of numbers with <code>list(range(1,11))</code> and then <code>append(1)</code> to your list so you will have a mode. Print out the numbers.</li>
+  <li>Print out the mean for the list of numbers.</li>
+  <li>Print out the median for the list of numbers.</li>
+  <li>Print out the mode for the list of numbers.</li>
+  <li>Append another <code>1</code> to your list and print out the mean, median, and mode.</li>
+  <li>Read in a file <code>numbers.txt</code>, which should have a number entered one per line.</li>
+  <li>Write functions to read in the data from a file &amp; calculate each statistic:
+    <ul>
+      <li><code>file_input(filename)</code>: returns the list of numbers read in from file filename</li>
+      <li><code>mean(numbers)</code>: takes a list of numbers as a parameter and returns their mean</li>
+      <li><code>median(numbers)</code>: takes a list of numbers as a parameter and returns their median</li>
+      <li><code>mode(numbers)</code>: takes a list of numbers as a parameter and returns their mode</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>
+    <p>There are two different ways to sort a list: <code>sorted</code> and <code>sort</code>. The function <code>sorted(list)</code> returns a sorted version of the list without modifying the original, whereas <code>list.sort()</code> doesn’t return anything but does change the original:</p>
+
+    <pre><code>&gt;&gt;&gt; list = [5, 7, 5, 1, 5]
+&gt;&gt;&gt; sorted(list)
+[1, 5, 5, 5, 7]
+&gt;&gt;&gt; print(list)
+[5, 7, 5, 1, 5]
+&gt;&gt;&gt; list.sort()
+&gt;&gt;&gt; print(list)
+[1, 5, 5, 5, 7]
+</code></pre>
+  </li>
+  <li>
+    <p>Make sure you don’t have any blank lines in your file.</p>
+  </li>
+</ul>
+
+<h2 id="solution">Solution</h2>
+
+<p>When you’ve attempted the PHW, you can see my <a href="stat.py">solution</a>.</p>
+
+<!--
+		
+	def mean(numbers):
+		return sum(numbers) / len(numbers)
+	
+	def median(numbers):
+		sorted_num = sorted(numbers)
+		if len(numbers) % 2 == 1: # odd
+			return sorted_num[len(numbers) // 2]
+		else: # even
+			i1 = len(numbers) // 2 
+			i2 = i1 - 1
+			#print("i1:", i1, "i2", i2, "len:", len(numbers), sorted_num)
+			return (sorted_num[i1] + sorted_num[i2]) / 2
+	
+	def mode(numbers):
+		freq = {}
+		for n in numbers:
+			freq[n] = freq.get(n, 0) + 1
+	# 		if n in freq:
+	# 			freq[n] += 1
+	# 		else:
+	# 			freq[n] = 1
+		#print(freq)
+		mode = 0
+		max = 0
+		for key in freq:
+			# freq.get(key) or freq[key]
+			if freq.get(key) > max: 
+				max = freq.get(key)
+				mode = key
+		return mode
+	
+	#numbers = list(range(1,11))
+	numbers = []
+	file = open("numbers.txt")
+	for line in file:
+		numbers.append(eval(line))
+	file.close()
+	
+	print(numbers)
+	print("Mean: ", mean(numbers) )
+	print("Median: ", median(numbers) )
+	print("Mode: ", mode(numbers) )-->
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

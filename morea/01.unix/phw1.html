@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice HW1 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-hw1-unix-hardware--syntax">Practice HW1: UNIX, Hardware, &amp; Syntax</h1>
+
+<h2 id="unix-setup">UNIX Setup</h2>
+
+<p>The first step is to get access to a UNIX command line.</p>
+
+<h3 id="mac-users">Mac Users</h3>
+
+<p>Good news! Macs come with UNIX built-in, although you will still need to install python &amp; a good text editor. Follow <a href="install-mac.html">these installation instructions</a> and then <a href="unix-custom.html">customized your terminal</a>.</p>
+
+<p>If the above steps don’t work for your mac, you can follow the directions for Windows users, below.</p>
+
+<h3 id="windows-users">Windows Users</h3>
+
+<p>Windows users (and some mac users) will need to install a program called VirtualBox, which allows you to run UNIX inside of any other host operating system (OS). It’s like having another computer running virtually <em>inside</em> your Windows machine. Follow <a href="install-windows.html">these installation instructions</a> to setup.</p>
+
+<h2 id="exploring-the-unix-command-line">Exploring the UNIX command line</h2>
+
+<p>Read through the following tutorial: <a href="http://www.davidbaumgold.com/tutorials/command-line/">http://www.davidbaumgold.com/tutorials/command-line/</a>. Then, open your UNIX terminal and go through the following steps.</p>
+
+<ol>
+  <li>Let’s create a directory for this class. Type <code>mkdir csci117</code>.</li>
+  <li>Type <code>cd csci117</code> to move the terminal to that directory</li>
+  <li>Type <code>touch testfile.txt</code> to create an empty file</li>
+  <li>Type <code>ls</code> in the terminal. Do you see testfile.txt?</li>
+  <li>Type <code>pwd</code> to see what directory your terminal is in, then try to navigate your computer’s GUI (window’s explorer or mac finder) to display that directory. Do the GUI folder and terminal listing from the prior step match?</li>
+  <li>Let’s edit our testfile:
+    <ul>
+      <li>If you have <a href="unix-custom.html">customized your terminal</a>: <code>ped testfile.txt</code></li>
+      <li>On mac: <code>open -a textwrangler testfile.txt</code></li>
+      <li>On windows virtual box: <code>gedit testfile.txt &amp;</code></li>
+    </ul>
+  </li>
+  <li>Type your name and save the file</li>
+  <li>Arrange your windows so you can see your editor and your terminal at the same time.</li>
+  <li>In the terminal, type <code>cat testfile.txt</code>. Is your name displayed?</li>
+  <li>Take a single screenshot of your desktop showing your editor and UNIX terminal window open at the same time.</li>
+</ol>
+
+<h2 id="exploring-hardware">Exploring Hardware</h2>
+
+<p>Fill in the following blanks with: motherboard, processor, memory, hard drive:</p>
+
+<ol>
+  <li>variables are stored in/on <strong>__</strong>__</li>
+  <li>the <strong>__</strong>__ executes program statements</li>
+  <li>when a program is not being executed, it resides in/on <strong>__</strong>__</li>
+  <li>a <strong>__</strong>__ connects all the components of a computer with a bus</li>
+</ol>
+
+<h2 id="running-your-first-python-program">Running your first python program</h2>
+
+<p>In a graded HW or project, I would give you directions like this:</p>
+
+<ol>
+  <li>Create a folder (<code>mkdir phw1_uLogin</code>) where you replace <code>uLogin</code> with your Drew e-mail address before the @ sign.</li>
+  <li>Go into this folder by typing <code>cd phw1_uLogin</code> and create a python file: <code>touch hello_world.py</code></li>
+  <li>Edit the file (<code>ped hello_world.py</code>) to print “Hello, World!”. <em>Make sure to save your file.</em></li>
+  <li>Run your python program: <code>python3 hello_world.py</code></li>
+  <li>Once you’re satisfied that your program is working correctly, zip it for submission:
+    <ul>
+      <li><code>cd ..</code></li>
+      <li><code>zip hw2_uLogin.zip hw2_uLogin/*</code></li>
+    </ul>
+  </li>
+</ol>
+
+<!--## Demonstration
+
+Once you've finished doing the HW a single time, you can watch me do it:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/bMbr3Xpbgzk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.
+
+### Screenshot of my final UNIX terminal:
+
+<a href="terminalA.png"><img src="terminalA.png" width="400"/></a><BR>
+<a href="terminalB.png"><img src="terminalB.png" width="400"/></a><BR>
+<a href="terminalC.png"><img src="terminalC.png" width="400"/></a>-->
+
+<!--## Demonstration
+
+Once you've finished doing the HW a single time, watch me do it:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/CIC9W_H1TjA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.-->
+
+<!--## Solutions
+
+### My Final UNIX Screenshot
+
+<a href="screenshot.png"><img src="screenshot.png" width="400"/></a>
+
+### Solutions to Hardware Questions
+
+<a href="HardwareSolutions.png"><img src="HardwareSolutions.png" width="400"/></a>-->
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

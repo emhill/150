@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> PHW8 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-hw8-recursion--lists">Practice HW8: Recursion &amp; Lists</h1>
+
+<p>In this practice HW you will create 3 programs that use strings, lists, and recursion.</p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;30 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 30-60 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 60-90 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 90+ min</span>
+</span></p>
+
+<h2 id="modepy">mode.py</h2>
+
+<p>Create a program that calculates the most frequently occurring number in a list of 10 numbers. You may hard-code in a list of numbers rather than getting them as input from the user. You may use the python <a href="https://docs.python.org/3.4/library/statistics.html#statistics.mode">mode</a> function from the statistics package.</p>
+
+<p><strong><em>Recommended Development Steps:</em></strong></p>
+
+<ol>
+  <li>Create a list of 10 numbers and print it out</li>
+  <li>Make sure one number occurs more than any other</li>
+  <li>Print out the <a href="https://docs.python.org/3.4/library/statistics.html#statistics.mode">mode</a> function applied to the list</li>
+</ol>
+
+<h2 id="wheelpy">wheel.py</h2>
+
+<p>Write an <strong>iterative</strong> function <code>count_vowels</code> which takes a word as a parameter and returns the number of vowels in that string.</p>
+
+<p>Write a <strong>recursive</strong> function <code>sajak</code> which takes a word as a parameter and returns the number of vowels in that string.</p>
+
+<p>Test both functions by asking the user to enter a word, and printing the number of vowels found by each function.</p>
+
+<p><strong><em>Recommended Development Steps:</em></strong></p>
+
+<ol>
+  <li>Create a variable containing a single letter. Write an if statement to determine if that letter is a vowel or not. (<strong><em>Hint</em></strong>: use <code>in</code>)</li>
+  <li>Put that if inside a loop that iterates through every letter in a string and prints out whether each letter is a vowel or not</li>
+  <li>Update the loop to count the number of vowels and print the total at the end. This is the <code>count_vowels</code> function.</li>
+  <li>For the recursive <code>sajak</code> function, think about how you can recursively print the first or last letter in a string, and implement it.</li>
+  <li>Instead of printing the letter, print whether it’s a vowel.</li>
+  <li>Instead of printing, count whether the letter is a vowel or not.</li>
+</ol>
+
+<h2 id="textpy">text.py</h2>
+
+<p>Write a function <code>pyramid</code> that takes a string of text as a parameter and outputs the text as follows:</p>
+
+<pre><code>Enter text: we love CS
+w
+we
+we 
+we l
+we lo
+we lov
+we love
+we love 
+we love C
+we love CS
+we love C
+we love 
+we love
+we lov
+we lo
+we l
+we 
+we
+w
+</code></pre>
+
+<p>You may use <em>either</em> recursion <em>or</em> iteration in your solution. Note: if you use recursion, will need to implement 2 functions: one for printing top triangle of letters and one that prints the bottom triangle of letters. If using iteration, you will need 2 loops.</p>
+
+<p>Test your functions by getting a string of text from the user and printing the results of both functions.</p>
+
+<p><strong><em>Recommended Development Steps:</em></strong></p>
+
+<ol>
+  <li>Create a string variable &amp; print it out</li>
+  <li>Think about the pattern of strings that are printed. Write a loop or a recursive function that successively prints out a substring from index 0 to the end. (<strong><em>Hint</em></strong>: use <code>:</code>)</li>
+  <li>Now print the other way</li>
+  <li>Get input from the user</li>
+</ol>
+
+<!--## Demonstration
+
+
+Once you've finished doing the HW a single time, you can watch me do it. ***Note***, this video includes exercises in a different order:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/hsjv5f2DlFk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+Recursive solution to pyramid function in `text.py`:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/yBrjRTtFiTE" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.
+
+-->
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

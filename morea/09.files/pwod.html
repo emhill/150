@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> PHW10 | CSCI 150 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/150/css/themes/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="/150/css/style.css">
+  <link rel="stylesheet" href="/150/css/syntax.css">
+  <link rel="shortcut icon" href="/150/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/150/index.html"> CSCI 150 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/150/modules/">Modules</a></li>
+        
+          <li><a href="/150/outcomes/">Outcomes</a></li>
+        
+        
+          <li><a href="/150/readings/">Readings</a></li>
+        
+        
+          <li><a href="/150/experiences/">Experiences</a></li>
+        
+        
+          <li><a href="/150/assessments/">Assessments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-hw10-files--while">Practice HW10: Files &amp; While</h1>
+
+<p>In this practice HW you will create 3 programs that get input/output from files and use while loops. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;15 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 15-30 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 45+ min</span>
+</span></p>
+
+<h2 id="whilepy">while.py</h2>
+
+<p>Create a program <code>while.py</code> that allows the user to enter in a list of numbers, prints them out in sorted order, and prints the sum of the numbers. Prompt the user to continue entering numbers, and enter the number ‘0’ when finished.</p>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>The <a href="https://docs.python.org/3/library/functions.html#sum">python <code>sum</code> function</a> allows you to sum a list of numbers.</li>
+  <li>
+    <p>I recommend following the sentinel while loop pattern:</p>
+
+    <pre><code>value = initialize
+while value != sentinel:
+  process value
+  value = updated value
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="countpy">count.py</h2>
+
+<p>Write a program <code>count.py</code> that reads in <a href="data/turing.txt">the file <code>turing.txt</code></a> and counts the number of occurrences of the word “the”. </p>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>Lowercase your words so that “the” is counted the same as “The”.</li>
+  <li>Using one of the following functions is recommended:
+    <ul>
+      <li>The <a href="https://docs.python.org/3.4/library/stdtypes.html#str.split">string <code>split</code> function</a> allows you to split a line of input into a list of words by splitting the line on spaces.</li>
+      <li>The <a href="http://www.thehelloworldprogram.com/python/python-string-methods/"><code>count</code> function</a> allows you to count the number of occurrences in a string or list.</li>
+    </ul>
+  </li>
+  <li>Review the lecture slides or example file programs in the unit for help on reading in a file, and <a href="http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python">see this online tutorial</a></li>
+</ul>
+
+<p><strong><em>Recommended Development Steps:</em></strong></p>
+
+<ol>
+  <li>Download <a href="data/turing.txt"><code>turing.txt</code></a> &amp; put it in the same folder as <code>count.py</code>.</li>
+  <li>Read in the file &amp; print it out (either line by line or as one big string)</li>
+  <li>Print out the number of ‘the’s using the count function, <strong>OR</strong> complete the following steps.</li>
+  <li>Print the line split on spaces.</li>
+  <li>Print just a word on each line.</li>
+  <li>Only print out “the”.</li>
+  <li>Count the number of times you see “the” (create a variable or a list) and print it out.</li>
+</ol>
+
+<h2 id="linespy">lines.py</h2>
+
+<p>Write a python program that reads 3 files, called <code>text1.txt</code>, <code>text2.txt</code>, and <code>text3.txt</code>, counts the number of lines in each file, and prints out the number of lines to a file <code>counts.txt</code>. Each line of <code>counts.txt</code> should look like <code>[filename] : [the number of lines in the file]</code>.</p>
+
+<p><strong><em>Hints:</em></strong></p>
+
+<ul>
+  <li>In UNIX you can get the number of lines in a file using the word count command: <code>wc -l [filename]</code>. This will allow you to test that your code is working correctly.</li>
+  <li>You should add the file names <code>text1.txt</code>, <code>text2.txt</code>, and <code>text3.txt</code> to a list, so you don’t have to copy &amp; paste your code.</li>
+</ul>
+
+<!--## Demonstration
+
+
+Once you've finished doing the HW a single time, you can watch me do it for `while.py` and `count.py`:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/2GkDAxZOnt8" frameborder="0" allowfullscreen></iframe>
+</div>
+
+My solution for `lines.py`:
+
+	file_list = ["text1.txt", "text2.txt", "text3.txt"]
+	
+	count = open("counts.txt", "w")
+	
+	for file in file_list:
+		 f = open(file)
+		 num = sum(1 for line in f)
+		 # [filename]: [the number of lines in the file]
+		 print(file , ":" , num, file=count)
+		 #count.write(file + ": " + str(num) + "\n")
+		 f.close()
+	
+	count.close()
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.-->
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#104;&#105;&#108;&#108;&#049;&#064;&#100;&#114;&#101;&#119;&#046;&#101;&#100;&#117;">Emily Hill</a> | <a href="http://www.drew.edu/mcs/">Department of Mathematics and Computer Science</a> | <a href="http://www.drew.edu/">Drew University</a> <br />
+<!---emhill@drew.edu<br>--></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
+       Last update on: <span>2015-08-28 13:31:58 -0400</span></p>
+    <p style="margin: 0">
+      12 modules
+      
+        | 3 outcomes
+      
+      
+        | 17 readings
+      
+      
+        | 33 experiences
+      
+      
+        | 4 assessments
+      
+    </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
