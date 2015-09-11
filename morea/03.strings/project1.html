@@ -67,21 +67,21 @@
 <h2 id="setup">Setup</h2>
 
 <ul>
-  <li><code>mkdir project1_uLogin</code></li>
-  <li><code>cd project1_uLogin</code></li>
+  <li><code>mkdir project1_uLogin1_uLogin2</code></li>
+  <li><code>cd project1_uLogin1_uLogin2</code></li>
   <li><code>touch bye.py convert.py fun.py string.py</code></li>
 </ul>
 
-<p><em>Don’t forget to add a comment at the top of each program with your name and what the program does.</em></p>
+<p><strong><em>Don’t forget to add a comment at the top of each program with your &amp; your partner(s) names and what the program does.</em></strong></p>
 
 <h2 id="byepy">bye.py</h2>
 
 <ol>
   <li>Edit the file (<code>ped bye.py</code>):
     <ol>
-      <li>Create a variable to store your last name</li>
+      <li>Create a variable that stores a name    </li>
       <li>Print “Goodbye, …!” and replace the ellipsis (…) with the variable that is storing your last name.</li>
-      <li>Add a comment at the top of the file that explains what your program does.</li>
+      <li>Add a comment at the top of the file that explains what your program does and who the authors are.</li>
     </ol>
   </li>
   <li>Run your python program: <code>python3 bye.py</code></li>
@@ -90,47 +90,47 @@
 
 <h2 id="convertpy">convert.py</h2>
 
-<p>Create a program <code>convert.py</code>, that takes a fahrenheit temperature as input and outputs the equivalent temperature in celsius. Your program should have 2 variables:</p>
+<p>Create a program <code>convert.py</code>, that takes a measurement in inches as input and outputs the equivalent length in centimeters. Your program should have 2 variables:</p>
 
 <ul>
-  <li><code>degrees_f</code>: holds a temperature in degrees fahrenheit (input from the user)</li>
-  <li><code>degrees_c</code>: holds the temperature in degrees celsius. To convert fahrenheit to celsius, deduct 32 from the fahrenheit temperature and multiply by 5/9.</li>
+  <li><code>inches</code>: holds the length in inches (input from the user)</li>
+  <li><code>cm</code>: holds the length in centimeters. To convert inches to cm, multiply by 2.54.</li>
 </ul>
 
-<p>Your program shold print the values of both variables with a string description, such as: <code>"F degrees fahrenheit = C degrees celsius"</code>, replacing F &amp; C with the values of your variables.</p>
+<p>Your program shold print the values of both variables with a string description, such as: <code>"I inches = C cm"</code>, replacing I &amp; C with the values of your variables.</p>
 
 <p>For example:</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>degrees_f</strong></th>
-      <th style="text-align: center"><strong>degrees_c</strong></th>
+      <th style="text-align: center"><strong>inches</strong></th>
+      <th style="text-align: center"><strong>cm</strong></th>
       <th style="text-align: center"><strong>output</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">86</td>
-      <td style="text-align: center">30</td>
-      <td style="text-align: center">86 degrees fahrenheit = 30 degrees celsius</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2.54</td>
+      <td style="text-align: center">1 inches = 2.54 cm</td>
     </tr>
     <tr>
-      <td style="text-align: center">72</td>
-      <td style="text-align: center">22</td>
-      <td style="text-align: center">72 degrees fahrenheit = 22 degrees celsius</td>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center">30.48</td>
+      <td style="text-align: center">12 inches = 30.48 cm</td>
     </tr>
     <tr>
-      <td style="text-align: center">32</td>
-      <td style="text-align: center">0</td>
-      <td style="text-align: center">32 degrees fahrenheit = 0 degrees celsius</td>
+      <td style="text-align: center">39.5</td>
+      <td style="text-align: center">100.33</td>
+      <td style="text-align: center">39.5 inches = 100.33 cm</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="funpy">fun.py</h2>
 
-<p>Write a program <code>fun.py</code> that takes a number as input from the user and prints out the following information using the math module:</p>
+<p>Write a program <code>fun.py</code> that takes a float as input from the user and prints out the following information using the math module:</p>
 
 <ol>
   <li>The ceiling of the number (e.g., <code>ceiling(3.75)</code> is 4)</li>
@@ -144,7 +144,7 @@
 
 <ol>
   <li>Swaps upper and lower case letters</li>
-  <li>Removes the second and second to last characters</li>
+  <li>Removes the third and third to last characters</li>
 </ol>
 
 <p>Finally, print only the middle 3 letters using the substring or splice operation (<code>[:]</code>).</p>
@@ -162,13 +162,18 @@
   <tbody>
     <tr>
       <td style="text-align: center">Monty Python</td>
-      <td style="text-align: center">mNTY pYTHN</td>
-      <td style="text-align: center">y P</td>
+      <td style="text-align: center">mOTY pYTON</td>
+      <td style="text-align: center">‘y P’</td>
     </tr>
     <tr>
-      <td style="text-align: center">hello</td>
-      <td style="text-align: center">HLL</td>
-      <td style="text-align: center">ell</td>
+      <td style="text-align: center">hello!</td>
+      <td style="text-align: center">HEO!</td>
+      <td style="text-align: center">‘ell’ or ‘llo’</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">oh</td>
+      <td style="text-align: center">OH</td>
+      <td style="text-align: center">’’</td>
     </tr>
   </tbody>
 </table>
@@ -179,7 +184,7 @@
 
 <ul>
   <li><code>cd ..</code></li>
-  <li><code>zip project1_uLogin.zip project1_uLogin/*</code></li>
+  <li><code>zip project1_uLogin1_uLogin2.zip project1_uLogin1_uLogin2/*</code></li>
 </ul>
 
 <p>Upload your zip file to Google Classroom.</p>
@@ -197,7 +202,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-09-04 13:42:42 -0400</span></p>
+       Last update on: <span>2015-09-11 13:29:04 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
