@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Windows Setup via VirtualBox | CSCI 150 </title>
+  <title> Setup via VirtualBox | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,46 +54,41 @@
 
 
 <div class="container">
-  <h1 id="windows-unix-python-development-setup">Windows UNIX Python Development Setup</h1>
+  <h1 id="unix-python-development-setup-for-windows">UNIX Python Development Setup for Windows</h1>
 
-<p>I have already setup a UNIX installation for you, but to use it, you need to set it up in Virtual Box.</p>
+<p>I have already setup a UNIX installation for you, but to use it, you need to set it up in Virtual Machine software such as Virtual Box or VMware player.</p>
 
 <ol>
-  <li>Download and install <a href="https://www.virtualbox.org/">VirtualBox</a> on your computer
-    <ul>
-      <li>If VirtualBox doesn’t work, try downloading &amp; installing <a href="https://www.vmware.com/products/player/playerpro-evaluation.html">VMware player</a> instead. See me during office hours for help.</li>
-      <li>If you get a <code>VT-X error</code>, you can either turn on virtualization through BIOS <strong><em>OR</em></strong> install a <a href="http://releases.ubuntu.com/14.04.3/ubuntu-14.04.3-desktop-i386.iso">32-bit version of ubuntu</a> in your VirtualBox. See me during office hours for help.</li>
-    </ul>
-  </li>
-  <li>Download the <a href="http://cs.drew.edu/~emhill/117/CSCI-117.ova">VM image</a> (~2GB). If you encounter problems unzipping the VM (default unzip software may not be sufficient on older operating systems), 7zip is a free unzip program.</li>
-  <li>Install, run, shutdown, &amp; customize your VM.</li>
+  <li>Download and install <a href="https://www.vmware.com/products/player/playerpro-evaluation.html">VMware player</a> (recommended for Windows) or <a href="https://www.virtualbox.org/">VirtualBox</a> (recommended for Mac) on your computer.</li>
+  <li>Download the <a href="http://cs.drew.edu/~emhill/vm-images/CSCI-150.ova">VM image</a> (~2GB). If you encounter problems unzipping the VM (default unzip software may not be sufficient on older operating systems), 7zip is a free unzip program.</li>
+  <li>Install, run, shutdown, &amp; customize your VM (detailed steps below).</li>
 </ol>
 
-<h2 id="install-virtualbox--csci-117-vm">Install VirtualBox &amp; CSCI 117 VM</h2>
-
-<p>Watch this screencast to install &amp; setup your VirtualBox VM:</p>
-
-<div class="video-container">
-  <iframe src="http://www.youtube.com/embed/u7sHainPT8w" frameborder="0" allowfullscreen=""></iframe>
-</div>
+<h2 id="install-virtualbox--csci-150-vm">Install VirtualBox &amp; CSCI 150 VM</h2>
 
 <p>Steps:</p>
 
 <ol>
   <li>Install Virtual Box &amp; open it
     <ul>
-      <li>Once your virtual machine (VM) image file <code>CSCI-117.ova</code> has completed downloading (it should be about 2 GB), go to <code>File &gt; Import Appliance</code> in VirtualBox.</li>
-      <li>Browse to the <code>CSCI-117.ova</code> file on your computer, select <code>open</code> and then <code>Import</code>.</li>
-      <li>Once imported, you should see the CSCI-117 virtual machine powered off:<br />
+      <li>Once your virtual machine (VM) image file <code>CSCI-150.ova</code> has completed downloading (it should be about 2 GB), go to <code>File &gt; Import Appliance</code> in VirtualBox. On VMWare Player, go to <code>Open a Virtual Machine</code>.</li>
+      <li>Browse to the <code>CSCI-150.ova</code> file on your computer, select <code>open</code> and then <code>Import</code>.</li>
+      <li>Once imported, you should see the CSCI-150 virtual machine powered off:<br />
   <a href="VBMgr-full.png"><img src="VBMgr-sm.png" width="300" /></a></li>
-      <li>Hit the green arrow labeled <code>Start</code> the UNIX machine.</li>
-      <li>Once the UNIX VM has loaded, go to <code>Devices &gt; Insert Guest Additions CD image</code>. On VMware Player, this would be <code>Player &gt; Manage &gt; Install VMware Tools</code>.</li>
+      <li>Hit the green arrow (labeled <code>Start</code> on VirtualBox, <code>Play virtual machine</code> on VMware Player) to boot the UNIX machine. <em>Note</em>: If you get a <code>VT-X error</code>, you can either turn on virtualization through BIOS <strong><em>OR</em></strong> import the <a href="http://cs.drew.edu/~emhill/vm-images/CSCI-150-32bit.ova">32-bit version of the VM image</a> in your Virtual Machine. See me during office hours for help.</li>
+      <li><strong>VirtualBox only:</strong> Once the UNIX VM has loaded, go to <code>Devices &gt; Insert Guest Additions CD image</code>. (On VMware Player, this would be <code>Player &gt; Manage &gt; Install VMware Tools</code>, but it should already be installed.)</li>
       <li>You may need to enter the user name and/or password for this machine:</li>
       <li><strong>user</strong>: csci</li>
-      <li><strong>password</strong>: 117</li>
+      <li><strong>password</strong>: drew</li>
     </ul>
   </li>
 </ol>
+
+<p>You can also watch this screencast to install &amp; setup your VirtualBox VM:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/u7sHainPT8w" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 <h2 id="shutdown-the-vm">Shutdown the VM</h2>
 
@@ -157,7 +152,7 @@ This will allow you to copy/paste between your host computer and the virtual mac
 <p>A typical work session using the VirtualBox VM proceeds as follows:</p>
 
 <ul>
-  <li>Start VirtualBox, select the CSCI-117 VM, and click the Start button.</li>
+  <li>Start VirtualBox, select the CSCI-150 VM, and click the Start button.</li>
   <li>Do your work.</li>
   <li>When you’re ready to quit, select <code>Close</code> from the VirtualBox Machine menu and shutdown using your preferred method (saved state or shutdown)</li>
 </ul>
@@ -176,7 +171,7 @@ This will allow you to copy/paste between your host computer and the virtual mac
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-09-18 11:56:13 -0400</span></p>
+       Last update on: <span>2015-09-24 14:47:15 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
