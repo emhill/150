@@ -56,16 +56,18 @@
 <div class="container">
   <h1 id="project-2-turtle-drawing">Project 2: Turtle Drawing</h1>
 
-<p>In the beginning of the semester we drew interesting shapes on code.org. In this project, we will use the <a href="https://docs.python.org/3.4/library/turtle.html">turtle module</a> to draw shapes both iteratively and recursively. In this project, we will use loops, functions, conditions, and variables to draw pictures with the python turtle package.</p>
+<p><em>In the beginning of the semester we drew interesting shapes on code.org. In this project, we will use the <a href="https://docs.python.org/3.4/library/turtle.html">turtle module</a> to draw shapes both iteratively and recursively. In this project, we will use loops, functions, conditions, and variables to draw pictures with the python turtle package.</em></p>
 
-<p><strong>You may work with a partner</strong>; make sure both students are clearly identified in the comments at the top of each program.</p>
+<p><em><strong>You must work with a partner (unless granted permission in advance)</strong>; make sure both students are clearly identified in the comments at the top of each program.</em></p>
 
-<p>An important skill as a computer scientist is the ability to learn how to use an existing API library by reading documentation, finding good API usage examples on the internet, and adapting those examples to meet your needs. In this project, you will begin building these skills to help you make the transition from the classroom to practice.</p>
+<p><em>An important skill as a computer scientist is the ability to learn how to use an existing API library by reading documentation, finding good API usage examples on the internet, and adapting those examples to meet your needs. In this project, you will begin building these skills to help you make the transition from the classroom to practice.</em></p>
+
+<p>To complete the assignment, you will need:</p>
 
 <ul>
-  <li><a href="project2.docx">Detailed project description</a></li>
+  <li>Detailed project description (below)</li>
   <li><a href="https://docs.python.org/3.4/library/turtle.html#overview-of-available-turtle-and-screen-methods">Python turtle documentation</a></li>
-  <li><strong>VirtualBox users:</strong> use <code>python</code> (<em>not</em> <code>python3</code>) to run your turtle programs</li>
+  <li>May need to use <code>python</code> (<em>not</em> <code>python3</code>) to run your turtle programs</li>
 </ul>
 
 <p>If you get stuck, please e-mail me a zip file of your project and a description of:</p>
@@ -76,6 +78,195 @@
 </ol>
 
 <!--If you are not able to complete the assignment by 3/16, be prepared to give a detailed progress update during class instead.-->
+
+<h1 id="instructions">Instructions</h1>
+
+<p>Create a folder <code>project2-uLogin1_uLogin2</code>, replacing the uLogins with the e-mail ids of you and your partner. </p>
+
+<h2 id="part-1-learn-how-to-work-with-turtles">Part 1: Learn how to work with turtles</h2>
+
+<h3 id="draw-a-line">1. Draw a line</h3>
+
+<p>Create a python program where you can play with turtles. Draw a line on the screen using the python turtle package. I learned how to make turtle programs by using <a href="http://openbookproject.net/thinkcs/python/english3e/hello_little_turtles.html">these examples</a></p>
+
+<p>A basic turtle program looks like the following:</p>
+
+<pre><code>import turtle
+turtle.shape("turtle") # optional
+turtle.speed(0)		    # optional
+
+turtle.forward(90)
+turtle.left(90)
+turtle.forward(90)
+
+turtle.Screen().exitonclick()
+</code></pre>
+
+<p>The first &amp; last lines should be in <strong><em>every</em></strong> turtle program you write. <strong><em>DO NOT NAME YOUR PROGRAM turtle.py!</em></strong></p>
+
+<h3 id="draw-a-square">2. Draw a square</h3>
+
+<ol>
+  <li>
+    <p>Draw a square on the screen. </p>
+  </li>
+  <li>
+    <p>Change its color. </p>
+  </li>
+  <li>
+    <p>Make the line thicker by changing the pensize or width. </p>
+  </li>
+  <li>
+    <p>Change the speed the turtle draws.</p>
+  </li>
+  <li>
+    <p>Make a <code>square</code> function that takes the length of each side as a parameter &amp; draws a square using the <code>turtle</code>. Call this function instead of the lines you used to draw the square in step 1 above.</p>
+  </li>
+</ol>
+
+<h3 id="draw-two-squares">3. Draw two squares</h3>
+
+<p>It’s possible to move the turtle without drawing. Draw two squares on the screen that don’t touch. For example:</p>
+
+<p><img src="squares.png" width="300" /></p>
+
+<p>Now you’re ready to tackle the rest of the assignment. To speed up testing, set the turtle speed to be 0. <strong><em>None of the following turtle programs should take user input!</em></strong></p>
+
+<h2 id="part-2-functions--recursion">Part 2: Functions &amp; Recursion</h2>
+
+<h3 id="basicshapespy">basic_shapes.py</h3>
+
+<p>Create a program <code>basic_shapes.py</code> that implements the following functions. You may find <a href="http://www.mathsisfun.com/geometry/interior-angles-polygons.html">this webpage</a> to be helpful.</p>
+
+<ol>
+  <li><code>rectangle(width, height)</code>: takes the length of the width and height as parameters.</li>
+  <li><code>square(side)</code>: takes the length of a side as a parameter. <strong>Implement this by calling the <code>rectangle</code> function</strong>.</li>
+  <li><code>triangle(side)</code>: takes the length of a side as a parameter and draws an equilateral triangle.</li>
+  <li><code>octagon(side)</code>: takes the length of a side as a parameter and draws an octagon.</li>
+</ol>
+
+<!--
+1.	`hexagon(side)`: takes the length of a side as a parameter and draws an hexagon.
+1.	`pentagon(side)`: takes the length of a side as a parameter and draws an pentagon.
+-->
+
+<p>Test that your functions work by clearly drawing a square, rectangle, triangle, and hexagon on the screen. They shouldn’t overlap too much. For example:</p>
+
+<p><img src="shapes.png" width="250" /></p>
+
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+
+<p>Remember to declare all your functions at the <strong><em>top</em></strong> of the file, <strong><em>before</em></strong> you call them.</p>
+
+<h3 id="polygonpy">polygon.py</h3>
+
+<p>Next we’ll generalize our polygon drawing by writing a program <code>polygon.py</code> with the following function:</p>
+
+<p><code>polygon(num_sides, length)</code>: takes the number of sides (<code>num_sides</code>) and the length of each side (<code>length</code>) as parameters. If the number of sides is less than 3, draw nothing.</p>
+
+<p><strong><em>Hint</em></strong>: To determine how far to turn your turtle, you will likely need to divide a multiple/factor of 360 (the number of degrees in a circle) by the number of sides.</p>
+
+<p>Test that your function works by using a loop to draw a number of shapes in an interesting pattern. Here are some examples:</p>
+
+<p><img src="polygon2.png" width="150" /> <img src="polygon1.png" width="150" /> <img src="polygon3.png" width="150" /></p>
+
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+
+<h3 id="polystarpy">polystar.py</h3>
+
+<p>We can use a similar technique to draw stars with an arbitrary number of points. Write a program <code>polygram.py</code> with the following function:</p>
+
+<p><code>polygram(num_pts, length)</code>: takes the number of points (<code>num_pts</code>) and the length of each line in the star (<code>length</code>) as parameters. You will need a different approach to drawing the stars depending on if there is an odd or even number of points.</p>
+
+<p><strong><em>Hints</em></strong>:</p>
+
+<ul>
+  <li>Implement the odd case first.  </li>
+  <li>How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version.</li>
+</ul>
+
+<p><img src="polygram.png" width="300" /></p>
+
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+
+<p>Even-sided stars can be drawn as two separate polygons with half the number of points. For example, a six-sided star can be drawn as two triangles. In between drawing these two polygons, you may find it useful to move your turtle:</p>
+
+<p><img src="polygram-code.png" width="300" /></p>
+
+<p>Test that your function works by drawing at least an even- and odd-pointed star. You should have <strong><em>one</em></strong> function called <code>polygram</code> that is capable of drawing <strong><em>both</em></strong> even- &amp; odd-pointed stars. However, feel free to delegate the responsibility of drawing odd- and even-pointed stars by writing separate functions <strong><em>called</em></strong> by <code>polygram</code>.</p>
+
+<h3 id="spiralpy">spiral.py</h3>
+
+<p>Let’s explore recursion by writing a program <code>spiral.py</code> with the following functions:</p>
+
+<p><code>spiral(length, angle)</code>: takes the length of the spiral (<code>length</code>) and the angle of the spiral (<code>angle</code>) as parameters. <strong>Implement using recursion.</strong> Think about how the parameters change at each recursive step. Should either parameter stay the same? What’s the base case?</p>
+
+<p><code>spiral_loop(length, angle)</code>: takes the length of the spiral (<code>length</code>) and the angle of the spiral (<code>angle</code>) as parameters. <strong>Implement using iteration.</strong> How should the loop change at each step/iteration?</p>
+
+<p><img src="spiral.png" width="200" /></p>
+
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+
+<p>Test your functions by drawing two different spirals.</p>
+
+<h3 id="treepy">tree.py</h3>
+
+<p>Create a program <code>tree.py</code> that recursively draws a tree using the following function:</p>
+
+<pre><code>def tree(size, angle):
+	if size &gt; 2:
+		turtle.forward(size)
+		turtle.right(angle)
+		tree(size/2, angle) 	# call A
+		turtle.left(2*angle)
+		tree(size/2, angle)		# call B
+		turtle.right(angle)
+		turtle.back(size)
+
+turtle.left(90)
+tree(200, 45)
+</code></pre>
+
+<p>Modify the above function so the output changes from this:</p>
+
+<p><img src="tree1.png" width="200" /> to this: <img src="tree2.png" width="200" />  </p>
+
+<h3 id="fibonaccipy">fibonacci.py</h3>
+
+<p>Our final recursive program does not make use of turtle. Instead, it will use recursion to calculate the <em>n<sup>th</sup></em> <a href="http://www.mathsisfun.com/numbers/fibonacci-sequence.html">fibonacci number</a>. A fibonacci number is calculated by adding the two numbers that come before it in the sequence. Think about what the recursive step will look like. Assume the sequence starts at 0 (for n = 0). How many base cases are need?</p>
+
+<p>Write a program <code>fibonacci.py</code> with the following function:</p>
+
+<p><code>fibonacci(n)</code>: takes the fibonacci sequence number (<code>n</code>) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented recursively.</p>
+
+<p>Test that your function works by getting a number (<code>n</code>) <strong>as input from the user</strong> and printing the result of calling your fibonacci function. <strong>Note:</strong> this is the <strong><em>only</em></strong> program in this project that should take user input.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>You will be graded on the following:</p>
+
+<ul>
+  <li><strong>Correctness</strong>: Your code should perform as specified. Correctness will count for the largest portion of your grade.</li>
+  <li><strong>Docstrings</strong>: For each function that you design from scratch, write a good docstring (<code>"""</code>). </li>
+  <li><strong>Internal comments</strong>: Within functions, the more complicated parts of your code should also be described using “internal” comments (i.e., docstrings).</li>
+  <li><strong>Programming style</strong>: Your variable names should be meaningful and your code as simple and clear as possible.</li>
+  <li><strong>Formatting style</strong>: Each line should be less than 80 characters long including spaces. You should break up long lines using <code>\</code>. </li>
+</ul>
+
+<h2 id="submitting">Submitting</h2>
+
+<p>When complete, your project should include the following six python programs:</p>
+
+<ul>
+  <li><code>basic_shapes.py</code></li>
+  <li><code>polygon.py</code></li>
+  <li><code>polygram.py</code></li>
+  <li><code>spiral.py</code></li>
+  <li><code>tree.py</code></li>
+  <li><code>fibonacci.py</code></li>
+</ul>
+
+<p>Zip your project using the same steps as for the practice HWs, giving the zip file the same name as your <code>project2-uLogin1_uLogin2</code> folder name, and submit to google classroom.</p>
 
 </div>
 
@@ -90,7 +281,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-09-24 14:53:36 -0400</span></p>
+       Last update on: <span>2015-09-25 16:00:08 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
