@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> PHW9 | CSCI 150 </title>
+  <title> Midterm Practice | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,43 +54,76 @@
 
 
 <div class="container">
-  <h1 id="practice-hw9-list-comprehensions">Practice HW9: List Comprehensions</h1>
+  <h1 id="practice-hw7-go-with-the-control-flow">Practice HW7: Go with the (control) flow</h1>
 
-<p>In this practice HW you will explore writing some list comprehensions.</p>
+<p>Rather than writing a program, in this practice HW you will walk through the execution of a program on paper. <strong><em>You don’t need to run the program to complete the assignment.</em></strong></p>
 
-<p><span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: &lt;5 min</span>
-  <span style="padding: 2px" class="label label-info">Av: 5-10 min</span>
-  <span style="padding: 2px" class="label label-warning">Sd: 10-15 min</span>
-  <span style="padding: 2px" class="label label-danger">DNF: 15+ min</span>
-</span></p>
+<!--<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <20 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 20-40 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 40-60 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 60+ min</span>
+</span>
+-->
 
-<p>Write python code (as a program or in the python interpreter) that prints out the following using list comprehensions of the form:</p>
+<h2 id="exercise-loopypy">Exercise: loopy.py</h2>
 
-<pre><code>print([c for x in sequence])
-</code></pre>
+<p>Take a look at <a href="loopy.pdf">loopy.py</a> and the output from a sample run. Each line of code in loopy.py is given a line number to the left. Given this sample run, in what order are the statements executed? List the line numbers in the order that they are executed. <em>Hint</em>: not all line numbers need to be included, and some line numbers may appear multiple times.</p>
 
-<p>where c is the computation and x is an element in a sequence. Remember that you can also put an <code>if</code> after the sequence to further restrict what elements are added to the list.</p>
+<p>Make sure you can answer the following questions:</p>
 
-<p>You should be able to print:</p>
-
-<ul>
-  <li>twelve 12’s</li>
-  <li>the absolute values from -10 to 10</li>
-  <li>the even numbers from 0 to 100</li>
-  <li>the perfect squares from 0 to 100</li>
-  <li>the number of odd numbers in the range of 0 to 100</li>
-  <li>the number of consonants in the string “Hi there”</li>
-  <li>the string “CS rocks!” with no vowels</li>
-</ul>
+<ol>
+  <li>What is the first line executed?</li>
+  <li>What is the last line executed?</li>
+  <li>Is each function fruitful or void?</li>
+</ol>
 
 <!--## Demonstration
 
-Once you've finished doing the HW a single time, you can watch me do it:
+*Coming soon...*
+
+Once you've finished doing the WOD a single time, you can watch me do it:
 
 <div class="video-container">
-  <iframe  src="http://www.youtube.com/embed/FMj6DvHxJw8" frameborder="0" allowfullscreen></iframe>
-</div>
+  <iframe  src="http://www.youtube.com/embed/0BPlMXkwdcY" frameborder="0" allowfullscreen></iframe>
+</div>-->
+
+<!--## Solution
+
+Order that the lines are executed:
+
+	34, 35, 36 get_area(+,+)
+		5, 6, 7
+	
+	36, 38 rectangle_outline
+		21, 22, 24, 25 draw_line(25)
+			16, 25 * (17, 18), 19
+	23 * (	22, 24, 28, 29, 23 * (30, 31), 32	)
+		22, 24, 25 draw_line(25)
+			16, 25 * (17, 18), 19 
+
+	40 get_area(-,+)
+		5, 6, 8, 9, 10, 11, 14
+
+	41 get_area(+,-)
+		5, 6, 8, 9, 10, 12, 13, 14
+
+	43, 44 draw_line
+		16, 17, 19
+	43, 44, 16, 1 * (17, 18), 19
+	43, 44, 16, 2 * (17, 18), 19
+	43, 44, 16, 3 * (17, 18), 19
+	43, 44, 16, 4 * (17, 18), 19
+	43
+
+Questions:
+
+1. 34
+1. 43 or 19
+2. Fruitful or void?
+    * get_area:		fruitful
+	* draw_line:		void
+	* rectangle_outline:	void
 
 ## Standard Practice HW Caveats
 
@@ -110,31 +143,6 @@ have not achieved at least Av (Average) performance. If so, be sure to:
   * Reset your timer.
 
 Feel free to keep trying until you make Rx if that’s of interest to you.-->
-
-<!--## Solution
-
-When you've attempted the PHW, you can see my solution below.
-
-    >>> print([12 for x in range(12)])
-    [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
-    
-	>>> print([abs(x) for x in range(-10,11)])
-	[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-	
-	>>> print([x for x in range(101) if x % 2 == 0])
-	[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100]
-	
-	>>> print([x**2 for x in range(1, 101) if x**2 < 100])
-	[1, 4, 9, 16, 25, 36, 49, 64, 81]
-	
-	>>> print(sum([1 for x in range(101) if x % 2 == 1]))
-	50
-	
-	>>> print(sum([1 for x in "Hello, there!" if x in "AEIOUaeiou"]))
-	4
-	
-	>>> print( “”.join( [ x for x in “CS rocks!” if x not in "AEIOUaeiou" ] ) )
-	"CS rcks!"-->
 
 </div>
 
