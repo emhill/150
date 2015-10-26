@@ -144,7 +144,7 @@
 
 <h3 id="mirrorvert">mirrorVert</h3>
 
-<p>Write a function <code>mirrorVert</code> that mirrors the image across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). The easiest approach is to replace the bottom half of <code>Im_pix</code> with the reversed rows from the top half. To do this, you’ll use the built-in function <code>getWH()</code> in <code>png_helper.py</code> to get the height of <code>Im_pix</code>. For example:</p>
+<p>Write a function <code>mirrorVert</code> that mirrors the image across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). The easiest approach is to replace the bottom half of <code>Im_pix</code> with the reversed rows from the top half of <code>flipVert</code>. To do this, you’ll use the built-in function <code>getWH()</code> in <code>png_helper.py</code> to get the height of <code>Im_pix</code>. Keep in mind that <code>getWH()</code> returns a <em>list</em> of width &amp; height. You can assign both values to variables with something like <code>width, height = getWH()</code>. </p>
 
 <p><img src="in.png" /> <img src="mirrorV.png" /></p>
 
@@ -197,7 +197,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-10-21 12:57:12 -0400</span></p>
+       Last update on: <span>2015-10-26 13:11:44 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
