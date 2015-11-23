@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> PHW12 | CSCI 150 </title>
+  <title> HW11 | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,7 +54,7 @@
 
 
 <div class="container">
-  <h1 id="practice-hw12-objects-in-python">Practice HW12: Objects in Python</h1>
+  <h1 id="hw11-objects-in-python">HW11: Objects in Python</h1>
 
 <p>In this practice HW you will implement the <code>Date</code> class we began during lecture.</p>
 
@@ -237,7 +237,7 @@ True           # so this should be True...
 
 <p>Next, you’ll show that <code>copy</code> does make a deep copy (instead of a copy of only the reference, or “shallow” copy):</p>
 
-<pre><code>&gt;&gt;&gt; import date; reload(date); from date import *  # reload your file...
+<pre><code>&gt;&gt;&gt; import date; from imp import reload; reload(date); from date import *  # reload your file...
 &gt;&gt;&gt; d = Date(1, 1, 2016)
 &gt;&gt;&gt; d2 = d.copy()
 &gt;&gt;&gt; d
@@ -309,7 +309,7 @@ False                           # so it should be False
 
 <p>Make sure to test your method with some tricky examples. Here are a couple of randomly chosen ones to get you started:</p>
 
-<pre><code>&gt;&gt;&gt; import date; reload(date); from date import *  # re-read file...
+<pre><code>&gt;&gt;&gt; import date; from imp import reload; reload(date); from date import *  # re-read file...
 
 &gt;&gt;&gt; d = Date(12, 31, 2015)
 &gt;&gt;&gt; d
@@ -337,7 +337,7 @@ False                           # so it should be False
 
 <p>Make sure to test your method. Here are some to start with:</p>
 
-<pre><code>&gt;&gt;&gt; import date; reload(date); from date import *  # re-read file...
+<pre><code>&gt;&gt;&gt; import date; from imp import reload; reload(date); from date import *  # re-read file...
 
 &gt;&gt;&gt; d = Date(4, 7, 2015)
 &gt;&gt;&gt; d.addNDays(3)
@@ -404,7 +404,7 @@ Feel free to keep trying until you make Rx if that’s of interest to you.-->
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-11-04 15:08:15 -0500</span></p>
+       Last update on: <span>2015-11-23 14:45:55 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
