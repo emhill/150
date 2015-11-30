@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> PHW5 | CSCI 150 </title>
+  <title> Project 5 | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,59 +54,46 @@
 
 
 <div class="container">
-  <h1 id="practice-hw5-for-loops">Practice HW5: For loops</h1>
+  <h1 id="project-5-connectfour">Project 5: ConnectFour</h1>
 
-<p>In this practice HW you will create 2 programs that use for loops.</p>
+<p>In this project you will develop a ConnectFour game using object-oriented concepts. <strong>You may work as a team of 2-3 or alone.</strong></p>
 
-<p><span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: &lt;15 min</span>
-  <span style="padding: 2px" class="label label-info">Av: 15-30 min</span>
-  <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
-  <span style="padding: 2px" class="label label-danger">DNF: 45+ min</span>
-</span></p>
-
-<h2 id="helloloopspy">hello_loops.py</h2>
-
-<p>Create a program that does the following:</p>
-
-<ol>
-  <li>Print the numbers from 1 to 10 (inclusive). Each number should be on a separate line.</li>
-  <li>Print the multiples of 5 from 10 through -25 (inclusive) on the same line. The numbers should each be separated by a space. (<em>Hint</em>: use the <code>end</code> parameter to the print function like we did in class; see loop_fun.py.) Don’t forget to print a newline after this loop by calling <code>print()</code> with no parameters.</li>
-  <li>Print the multiples of 3 from -3 to 21 (inclusive). Each number should be separated by a comma and a space. There should not be a comma after the final number (21). </li>
-</ol>
-
-<h2 id="averagepy">average.py</h2>
-
-<p>Create a program that calculates the average of a series of 10 real (i.e., decimal) numbers entered by the user. Make sure you ask (i.e., prompt) the user to enter each number (the user will hit enter after each number). Note you will need two numbers to calculate the average: the sum and the number of numbers entered by the user (10).</p>
-
-<h2 id="demonstration">Demonstration</h2>
-
-<p>Once you’ve finished doing the HW a single time, you can watch me do it:</p>
-
-<div class="video-container">
-  <iframe src="http://www.youtube.com/embed/lexkpbllvT0" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<h2 id="standard-practice-hw-caveats">Standard Practice HW Caveats</h2>
-
-<p>You’ll learn significantly less from watching me solve the
-HW if you haven’t attempted the HW yourself first.</p>
-
-<p>While it’s an achievement to finish the HW no matter how long it takes, you
-might experience “diminishing returns” if you work longer than the DNF (Did Not Finish)
-time. Thus, it might be strategic to stop working at the DNF time and watch
-my solution.</p>
-
-<p>After watching my solution, I recommend that you repeat the HW if you
-have not achieved at least Av (Average) performance. If so, be sure to:</p>
+<p>Begin by downloading <a href="project5.zip">project5.zip</a> and unzip it. You should see the following files:</p>
 
 <ul>
-  <li>Delete your old project so you cannot refer to it;</li>
-  <li>Don’t look at my screencast while you HW; and</li>
-  <li>Reset your timer.</li>
+  <li><code>game.py</code>: main program to play game <strong>DO NOT MODIFY</strong></li>
+  <li><code>connectfour.py</code>: where you will write your project code</li>
+  <li><code>csplot.py</code>: helper functions to draw the game <strong>DO NOT MODIFY</strong></li>
 </ul>
 
-<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+<p><strong>Steps:</strong></p>
+
+<ol>
+  <li>Open up <code>connectfour.py</code> and look at the <code>ConnectFour</code> class. Familiarize yourself with its attributes and how the methods are implemented.</li>
+  <li>Uncomment the <code>makeMove</code> method and its comment and implement the method. Adhere to the method’s comment description when implementing the method.</li>
+  <li>Uncomment the code in the play method to test <code>makeMove</code>. Run <code>game.py</code> to test.</li>
+  <li>Implement <code>_isWon</code> to determine if a player has won.</li>
+  <li>Uncomment the code in the play method to test <code>_isWon</code>.</li>
+  <li>Run <code>game.py</code> to test your game.</li>
+</ol>
+
+<p>You should only have to modify <code>connectfour.py</code> and <strong><em>not</em></strong> <code>csplot.py</code> or <code>game.py</code>. You may have to hit Control-C to kill the game if closing the window does not work.</p>
+
+<!--Draw a UML diagram of the given code. Example for the Date class:
+-->
+
+<h2 id="submission">Submission</h2>
+
+<p>Make sure you’ve added your name to the comments at the top of the file, that your program contains comments and follows good programming style.</p>
+
+<p>Once you’re satisfied that your game is working correctly, zip it for submission:</p>
+
+<ul>
+  <li><code>cd ..</code></li>
+  <li><code>zip project5_uLogin.zip project5_uLogin/*</code></li>
+</ul>
+
+<p><em>Assignment adapted from <a href="https://www.cs.hmc.edu/twiki/bin/view/CS5/FunWithImagesGold2010">Harvey Mudd’s CS 5 Fun with Images</a>.</em></p>
 
 </div>
 
