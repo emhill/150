@@ -93,12 +93,9 @@ class ConnectFour:
                 sleep(.75)
                 col = self._computerMakeMove()
                 
-            # TODO: After implementing the makeMove method above,
-            # uncomment the next two lines and test your program
             row = self.makeMove(player, col)
             self.showBoard()
-            # TODO uncomment after implementing isWon
-            #won = self._isWon(row, col)
+            won = self._isWon(row, col)
             
             # alternate players
             player = player % 2 + 1
