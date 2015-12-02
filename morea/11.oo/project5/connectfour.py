@@ -33,7 +33,8 @@ class ConnectFour:
             whichplayer - an integer representing the player who played the checker
             col - the integer index the player selected.
         """
-        
+        self.board[0][0] = 1
+        return 0
 
     def showBoard(self):
         csplot.show(self.board, ConnectFour.repToColor)

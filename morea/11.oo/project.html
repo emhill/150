@@ -78,6 +78,20 @@
 
 <p>Implement the <code>makeMove</code> method. Adhere to the method’s comment description when implementing the method.</p>
 
+<p><strong>Suggested Steps:</strong></p>
+
+<ol>
+  <li>
+    <p>Change color of <em>one</em> square by setting it equal to 1 or 2 and returning a valid row: </p>
+
+    <p><code>self.board[0][0] = 1</code></p>
+
+    <p><code>return 0</code></p>
+  </li>
+  <li>Change the color of the column <code>col</code>.</li>
+  <li>Loop over the column to find the first free slot and return this row. Don’t forget to use <code>whichplayer</code> to set the color instead of 1!</li>
+</ol>
+
 <p>Then, test <code>makeMove</code> by running <code>game.py</code>. Take a screenshot &amp; submit a screenshot for check point 2 (make sure to show your code &amp; a board with colored tiles).</p>
 
 <h2 id="step-3-iswon">Step 3: <code>_isWon</code></h2>
@@ -123,7 +137,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-11-30 14:08:52 -0500</span></p>
+       Last update on: <span>2015-12-02 13:22:34 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
