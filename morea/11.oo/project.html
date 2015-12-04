@@ -92,6 +92,8 @@
   <li>Loop over the column to find the first free slot and return this row. Don’t forget to use <code>whichplayer</code> to set the color instead of 1!</li>
 </ol>
 
+<p><a href="makeMove.JPG">&lt;img src=”makeMove.JPG” width=400&gt;</a></p>
+
 <p>Then, test <code>makeMove</code> by running <code>game.py</code>. Take a screenshot &amp; submit a screenshot for check point 2 (make sure to show your code &amp; a board with colored tiles).</p>
 
 <h2 id="step-3-iswon">Step 3: <code>_isWon</code></h2>
@@ -106,10 +108,13 @@
 
 <p><code>col = self._userMakeMove()</code></p>
 
-<p>This way you can control where all red and black peices go. Run <code>game.py</code> to test your game. When you’ve tested that both players can win in many configurations, you’re ready to submit.</p>
+<p>This way you can control where all red and black peices go.</p>
 
-<!--Draw a UML diagram of the given code. Example for the Date class:
--->
+<p>Start with vertical, and then do horizontal, followed by diagonal – each one gets  a little bit more challenging to get right. Diagonal especially is a bit tricky. You might consider drawing a diagram and writing down all the possible positions you need to check:</p>
+
+<p><a href="isWon.JPG">&lt;img src=”isWon.JPG” width=400&gt;</a></p>
+
+<p>Run <code>game.py</code> to test your game. When you’ve tested that both players can win in many configurations, you’re ready to submit. Don’t forget to turn the computer player back on!</p>
 
 <h2 id="extra-credit-smarter-computer-player">Extra Credit: Smarter computer player</h2>
 
@@ -145,7 +150,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-12-04 12:56:53 -0500</span></p>
+       Last update on: <span>2015-12-04 13:19:42 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
