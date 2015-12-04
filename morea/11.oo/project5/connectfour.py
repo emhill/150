@@ -33,7 +33,7 @@ class ConnectFour:
             whichplayer - an integer representing the player who played the checker
             col - the integer index the player selected.
         """
-        self.board[0][0] = 1
+
         return 0
 
     def showBoard(self):
@@ -93,10 +93,16 @@ class ConnectFour:
                 # and looks like an error
                 sleep(.75)
                 col = self._computerMakeMove()
+                # you can be player 2 for testing
+                # col = self._userMakeMove() 
                 
             row = self.makeMove(player, col)
             self.showBoard()
             won = self._isWon(row, col)
+
+            if won:
+                print("Player", player, "wins!")
+                sleep(2)
             
             # alternate players
             player = player % 2 + 1

@@ -8,6 +8,7 @@ def main():
     game = ConnectFour()
     game.showBoard()
     game.play()
+    
 
 main()
 

@@ -98,7 +98,15 @@
 
 <p>Implement <code>_isWon</code> to determine if a player has won. You may want to try implementing it for the tic tac toe game we looked at in class (<code>tictactoe2.py</code>), and then see how your solution could be adapted to go from looking at 3 spots to 4.</p>
 
-<p>Run <code>game.py</code> to test your game. When you’ve tested that both players can win, you’re ready to submit.</p>
+<p>Testing <code>_isWon</code> is difficult with the randomness of the computer player. I recommend commenting out the following line in the play method:</p>
+
+<p><code>col = self._computerMakeMove()</code></p>
+
+<p>and <em>un</em>commenting this one:</p>
+
+<p><code>col = self._userMakeMove()</code></p>
+
+<p>This way you can control where all red and black peices go. Run <code>game.py</code> to test your game. When you’ve tested that both players can win in many configurations, you’re ready to submit.</p>
 
 <!--Draw a UML diagram of the given code. Example for the Date class:
 -->
@@ -137,7 +145,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-12-02 13:22:34 -0500</span></p>
+       Last update on: <span>2015-12-04 12:56:53 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
