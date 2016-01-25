@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Practice HW2 | CSCI 150 </title>
+  <title> HW | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,7 +54,7 @@
 
 
 <div class="container">
-  <h1 id="practice-hw2-binary-unix--python-variables">Practice HW2: Binary, UNIX, &amp; Python Variables</h1>
+  <h1 id="hw-unix-hardware--binary">HW: UNIX, Hardware, &amp; Binary</h1>
 
 <!--<span class="h4">
   <span style="padding: 2px" class="label label-success">Rx: <10 min</span>
@@ -64,6 +64,71 @@
 </span>
 -->
 
+<h2 id="unix-setup">UNIX Setup</h2>
+
+<p>The first step is to get access to a UNIX command line.</p>
+
+<h3 id="mac-users">Mac Users</h3>
+
+<p>Good news! Macs come with UNIX built-in, although you will still need to install python &amp; a good text editor. Follow <a href="install-mac.html">these installation instructions</a> and then <a href="unix-custom.html">customized your terminal</a>.</p>
+
+<p>If the above steps don’t work for your mac, you can follow the directions for Windows users, below.</p>
+
+<h3 id="windows-users">Windows Users</h3>
+
+<p>Windows users (and some mac users) will need to install a program called VirtualBox, which allows you to run UNIX inside of any other host operating system (OS). It’s like having another computer running virtually <em>inside</em> your Windows machine. Follow <a href="install-windows.html">these installation instructions</a> to setup.</p>
+
+<h2 id="exploring-the-unix-command-line">Exploring the UNIX command line</h2>
+
+<p>Read through the following tutorial: <a href="http://www.davidbaumgold.com/tutorials/command-line/">http://www.davidbaumgold.com/tutorials/command-line/</a>. Then, open your UNIX terminal and go through the following steps.</p>
+
+<ol>
+  <li>Let’s create a directory for this class. Type <code>mkdir csci117</code>.</li>
+  <li>Type <code>cd csci117</code> to move the terminal to that directory</li>
+  <li>Type <code>touch testfile.txt</code> to create an empty file</li>
+  <li>Type <code>ls</code> in the terminal. Do you see testfile.txt?</li>
+  <li>Type <code>pwd</code> to see what directory your terminal is in, then try to navigate your computer’s GUI (window’s explorer or mac finder) to display that directory. Do the GUI folder and terminal listing from the prior step match?</li>
+  <li>Let’s edit our testfile:
+    <ul>
+      <li>If you have <a href="unix-custom.html">customized your terminal</a>: <code>ped testfile.txt</code></li>
+      <li>On mac: <code>open -a textwrangler testfile.txt</code></li>
+      <li>On windows virtual box: <code>gedit testfile.txt &amp;</code></li>
+    </ul>
+  </li>
+  <li>Type your name and save the file</li>
+  <li>Arrange your windows so you can see your editor and your terminal at the same time.</li>
+  <li>In the terminal, type <code>cat testfile.txt</code>. Is your name displayed?</li>
+  <li>Take a single screenshot of your desktop showing your editor and UNIX terminal window open at the same time.</li>
+</ol>
+
+<h2 id="exploring-hardware">Exploring Hardware</h2>
+
+<p>Fill in the following blanks with: motherboard, processor, memory, hard drive:</p>
+
+<ol>
+  <li>variables are stored in/on <strong>__</strong>__</li>
+  <li>the <strong>__</strong>__ executes program statements</li>
+  <li>when a program is not being executed, it resides in/on <strong>__</strong>__</li>
+  <li>a <strong>__</strong>__ connects all the components of a computer with a bus</li>
+</ol>
+
+<h2 id="running-your-first-python-program">Running your first python program</h2>
+
+<p>In a graded HW or project, I would give you directions like this:</p>
+
+<ol>
+  <li>Create a folder (<code>mkdir phw1_uLogin</code>) where you replace <code>uLogin</code> with your Drew e-mail address before the @ sign.</li>
+  <li>Go into this folder by typing <code>cd phw1_uLogin</code> and create a python file: <code>touch hello_world.py</code></li>
+  <li>Edit the file (<code>ped hello_world.py</code>) to print “Hello, World!”. <em>Make sure to save your file.</em></li>
+  <li>Run your python program: <code>python3 hello_world.py</code></li>
+  <li>Once you’re satisfied that your program is working correctly, zip it for submission:
+    <ul>
+      <li><code>cd ..</code></li>
+      <li><code>zip phw1_uLogin.zip phw1_uLogin/*</code></li>
+    </ul>
+  </li>
+</ol>
+
 <h2 id="binary-encoding">Binary Encoding</h2>
 
 <ol>
@@ -72,77 +137,6 @@
   <li>How many bits are in a byte?</li>
   <li>What is the binary representation of the number 3?</li>
   <li>What is the encoding standard used to convert text into ordinal numbers?</li>
-</ol>
-
-<h2 id="a-simple-python-program">A simple python program</h2>
-
-<ol>
-  <li>Create a folder <code>phw2_uLogin</code> where you replace <code>uLogin</code> with your Drew e-mail address before the @ sign.</li>
-  <li>Go into this folder by typing <code>cd phw2_uLogin</code> and create a python file: <code>touch hello_variable.py</code></li>
-  <li>Edit the file (<code>ped hello_variable.py</code>):
-    <ol>
-      <li>Create a variable to store your first name</li>
-      <li>Print “Hello, my name is …” and replace the ellipsis (…) with the variable that is storing your first name.</li>
-      <li>Add a comment at the top of the file that explains what your program does.</li>
-    </ol>
-  </li>
-  <li>Copy your python file <code>hello_variable.py</code> to <code>hello_me.py</code>.</li>
-  <li>Run your python program: <code>python3 hello_me.py</code></li>
-  <li>Create a second program called <code>tips.py</code>, that:
-    <ol>
-      <li>Has 4 variables:
-        <ul>
-          <li>meal: holds the value of the meal ($53.48)</li>
-          <li>tax: holds the tax percentage (7%)</li>
-          <li>tip: holds the tip percentage (18%)</li>
-          <li>total: holds the total of the meal. Proper tipping technique dictates that the tip should be calculated based on the total cost of the meal, before tax is applied.</li>
-        </ul>
-      </li>
-      <li>Prints the contents of the total variable with a leading dollar sign ($).</li>
-    </ol>
-  </li>
-  <li>Run your python program: <code>python3 tips.py</code>. The total should be <code>$66.85</code></li>
-  <li>Once you’re satisfied that your programs are working correctly, zip it for submission:
-    <ul>
-      <li><code>cd ..</code></li>
-      <li><code>zip phw2_uLogin.zip phw2_uLogin/*</code></li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="types--arithmetic">Types &amp; Arithmetic</h2>
-
-<p>Try to answer the following questions without typing them in to the <code>python3</code> interpreter, as you would on an exam or quiz.</p>
-
-<ol>
-  <li>Given the following values, what are their types:
-    <ol>
-      <li>True</li>
-      <li>‘True’</li>
-      <li>3 + 7j</li>
-      <li>34,756</li>
-      <li>98.7</li>
-      <li>“98.7”</li>
-      <li>“NY Giants”</li>
-    </ol>
-  </li>
-  <li>If the following statements are executed in order, what will be the values of each variable?
-    <ol>
-      <li>d = 7</li>
-      <li>c = 3</li>
-      <li>p = c / d</li>
-      <li>q = d // c</li>
-      <li>r = d % c</li>
-      <li>z = 5 * r ** q</li>
-    </ol>
-  </li>
-  <li>What would be an appropriate name and data type for the following variables:
-    <ol>
-      <li>The name of the Super Bowl MVP</li>
-      <li>The number of Vince Lombardi trophies a team has won</li>
-      <li>The average number of touchdown passes per game</li>
-    </ol>
-  </li>
 </ol>
 
 <h2 id="unix-command-overview">UNIX Command Overview</h2>
@@ -216,10 +210,82 @@
 <p>Once you’ve finished doing the HW a single time, you can watch me do it:</p>
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/NGK61X9ry9c" frameborder="0" allowfullscreen=""></iframe>
+  <iframe src="http://www.youtube.com/embed/bMbr3Xpbgzk" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
 <h2 id="standard-practice-hw-caveats">Standard Practice HW Caveats</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.</p>
+
+<p>While it’s an achievement to finish the HW no matter how long it takes, you
+might experience “diminishing returns” if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.</p>
+
+<p>After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you HW; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+<h3 id="screenshot-of-my-final-unix-terminal">Screenshot of my final UNIX terminal:</h3>
+
+<p><a href="terminalA.png"><img src="terminalA.png" width="400" /></a><br />
+<a href="terminalB.png"><img src="terminalB.png" width="400" /></a><br />
+<a href="terminalC.png"><img src="terminalC.png" width="400" /></a></p>
+
+<!--## Demonstration
+
+Once you've finished doing the HW a single time, watch me do it:
+
+<div class="video-container">
+  <iframe  src="http://www.youtube.com/embed/CIC9W_H1TjA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Standard Practice HW Caveats
+
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
+
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.
+
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
+
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
+
+Feel free to keep trying until you make Rx if that’s of interest to you.-->
+
+<!--## Solutions
+
+### My Final UNIX Screenshot
+
+<a href="screenshot.png"><img src="screenshot.png" width="400"/></a>
+
+### Solutions to Hardware Questions
+
+<a href="HardwareSolutions.png"><img src="HardwareSolutions.png" width="400"/></a>-->
+
+<h2 id="demonstration-1">Demonstration</h2>
+
+<p>Once you’ve finished doing the HW a single time, you can watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/NGK61X9ry9c" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-practice-hw-caveats-1">Standard Practice HW Caveats</h2>
 
 <p>You’ll learn significantly less from watching me solve the
 HW if you haven’t attempted the HW yourself first.</p>
@@ -257,7 +323,7 @@ have not achieved at least Av (Average) performance. If so, be sure to:</p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2015-12-04 13:19:42 -0500</span></p>
+       Last update on: <span>2016-01-24 23:04:06 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
