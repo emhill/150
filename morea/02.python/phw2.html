@@ -66,39 +66,21 @@
 
 <h2 id="unix-setup">UNIX Setup</h2>
 
-<p>The first step is to get access to a UNIX command line.</p>
-
-<h3 id="mac-users">Mac Users</h3>
-
-<p>Good news! Macs come with UNIX built-in, although you will still need to install python &amp; a good text editor. Follow <a href="install-mac.html">these installation instructions</a> and then <a href="unix-custom.html">customized your terminal</a>.</p>
-
-<p>If the above steps don’t work for your mac, you can follow the directions for Windows users, below.</p>
-
-<h3 id="windows-users">Windows Users</h3>
-
-<p>Windows users (and some mac users) will need to install a program called VirtualBox, which allows you to run UNIX inside of any other host operating system (OS). It’s like having another computer running virtually <em>inside</em> your Windows machine. Follow <a href="install-windows.html">these installation instructions</a> to setup.</p>
+<p>Access a UNIX command line by going to: <a href="http://www.tutorialspoint.com/unix_terminal_online.php">http://www.tutorialspoint.com/unix_terminal_online.php</a></p>
 
 <h2 id="exploring-the-unix-command-line">Exploring the UNIX command line</h2>
 
-<p>Read through the following tutorial: <a href="http://www.davidbaumgold.com/tutorials/command-line/">http://www.davidbaumgold.com/tutorials/command-line/</a>. Then, open your UNIX terminal and go through the following steps.</p>
+<p>Read through the following tutorial: <a href="http://www.davidbaumgold.com/tutorials/command-line/">http://www.davidbaumgold.com/tutorials/command-line/</a>. Then, open your <a href="http://www.tutorialspoint.com/unix_terminal_online.php">UNIX terminal</a> and go through the following steps.</p>
 
 <ol>
-  <li>Let’s create a directory for this class. Type <code>mkdir csci117</code>.</li>
-  <li>Type <code>cd csci117</code> to move the terminal to that directory</li>
+  <li>Let’s create a directory for this class. Type <code>mkdir csci150</code>.</li>
+  <li>Type <code>cd csci150</code> to move the terminal to that directory</li>
   <li>Type <code>touch testfile.txt</code> to create an empty file</li>
   <li>Type <code>ls</code> in the terminal. Do you see testfile.txt?</li>
-  <li>Type <code>pwd</code> to see what directory your terminal is in, then try to navigate your computer’s GUI (window’s explorer or mac finder) to display that directory. Do the GUI folder and terminal listing from the prior step match?</li>
-  <li>Let’s edit our testfile:
-    <ul>
-      <li>If you have <a href="unix-custom.html">customized your terminal</a>: <code>ped testfile.txt</code></li>
-      <li>On mac: <code>open -a textwrangler testfile.txt</code></li>
-      <li>On windows virtual box: <code>gedit testfile.txt &amp;</code></li>
-    </ul>
-  </li>
-  <li>Type your name and save the file</li>
-  <li>Arrange your windows so you can see your editor and your terminal at the same time.</li>
+  <li>Type <code>pwd</code> to see what directory your terminal is in.</li>
+  <li>Add your name to the file by typing <code>echo "Your name" &gt; testfile.txt</code></li>
   <li>In the terminal, type <code>cat testfile.txt</code>. Is your name displayed?</li>
-  <li>Take a single screenshot of your desktop showing your editor and UNIX terminal window open at the same time.</li>
+  <li>Take a single screenshot of your UNIX terminal window with the above commands.</li>
 </ol>
 
 <h2 id="exploring-hardware">Exploring Hardware</h2>
@@ -112,23 +94,6 @@
   <li>a <strong>__</strong>__ connects all the components of a computer with a bus</li>
 </ol>
 
-<h2 id="running-your-first-python-program">Running your first python program</h2>
-
-<p>In a graded HW or project, I would give you directions like this:</p>
-
-<ol>
-  <li>Create a folder (<code>mkdir phw1_uLogin</code>) where you replace <code>uLogin</code> with your Drew e-mail address before the @ sign.</li>
-  <li>Go into this folder by typing <code>cd phw1_uLogin</code> and create a python file: <code>touch hello_world.py</code></li>
-  <li>Edit the file (<code>ped hello_world.py</code>) to print “Hello, World!”. <em>Make sure to save your file.</em></li>
-  <li>Run your python program: <code>python3 hello_world.py</code></li>
-  <li>Once you’re satisfied that your program is working correctly, zip it for submission:
-    <ul>
-      <li><code>cd ..</code></li>
-      <li><code>zip phw1_uLogin.zip phw1_uLogin/*</code></li>
-    </ul>
-  </li>
-</ol>
-
 <h2 id="binary-encoding">Binary Encoding</h2>
 
 <ol>
@@ -139,106 +104,96 @@
   <li>What is the encoding standard used to convert text into ordinal numbers?</li>
 </ol>
 
-<h2 id="unix-command-overview">UNIX Command Overview</h2>
+<!--## UNIX Command Overview
 
-<p>For each of the following commands:</p>
+For each of the following commands:
 
-<p>A. Briefly describe what it does in your own words. Example: </p>
+A. Briefly describe what it does in your own words. Example: 
 
-<pre><code>wget downloads files from the internet
-</code></pre>
+    wget downloads files from the internet
 
-<p>If you don’t know what a command does, google it. I recommend throwing the word “man” (short for manual) in front of the command.</p>
+If you don't know what a command does, google it. I recommend throwing the word "man" (short for manual) in front of the command.
 
-<p>B. Write a template of how the command is used – indicate arguments in [brackets]. For example, a template for the wget command would look like this:</p>
+B. Write a template of how the command is used -- indicate arguments in [brackets]. For example, a template for the wget command would look like this:
 
-<pre><code>wget [url to download]
-</code></pre>
+    wget [url to download]
 
-<p>Alternatively, the zip command to submit an assignment might look like this:</p>
+Alternatively, the zip command to submit an assignment might look like this:
 
-<pre><code>zip [folder].zip [folder]/*
-</code></pre>
+    zip [folder].zip [folder]/*
 
-<p>C. Take a screenshot of using the command on your terminal, cropping out irrelevant parts. You should make sure the command works in the screen shot.</p>
+C. Take a screenshot of using the command on your terminal, cropping out irrelevant parts. You should make sure the command works in the screen shot.
 
-<p>Example for <strong>wget</strong>:</p>
+   Example for **wget**:
 
-<p><a href="wget.png"><img src="wget.png" width="500" /></a></p>
+   <a href="wget.png"><img src="wget.png" width="500"/></a>
 
-<p>The example for <strong>remove</strong> also needs to show the file is no longer there:</p>
+   The example for **remove** also needs to show the file is no longer there:
 
-<p><a href="rm.png"><img src="rm.png" width="300" /></a></p>
+   <a href="rm.png"><img src="rm.png" width="300"/></a>
 
-<p>Your document should be organized by command – for example, you should describe the ls command, give its template, and include a cropped screenshot before moving on to the next command, pwd.</p>
+Your document should be organized by command -- for example, you should describe the ls command, give its template, and include a cropped screenshot before moving on to the next command, pwd.
 
-<p><strong>Commands:</strong></p>
+**Commands:**
 
-<ol>
-  <li>ls</li>
-  <li>pwd</li>
-  <li>cd</li>
-  <li>touch</li>
-  <li>mkdir</li>
-  <li>cp</li>
-  <li>mv</li>
-  <li>rm</li>
-  <li>ped</li>
-  <li>cat</li>
-  <li>zip    </li>
-  <li>.      (not a command, use in conjunction with another command)</li>
-  <li>..      (not a command, use in conjunction with another command)</li>
-  <li>tab     (no screenshot necessary)</li>
-  <li>↑      (no screenshot necessary)</li>
-</ol>
+1. ls
+1. pwd
+1. cd
+1. touch
+1. mkdir
+1. cp
+1. mv
+1. rm
+1. ped
+1. cat
+1. zip    
+1.  .      (not a command, use in conjunction with another command)
+1. ..      (not a command, use in conjunction with another command)
+1. tab     (no screenshot necessary)
+1.  ↑      (no screenshot necessary)
 
-<p><strong>How to take <em>&amp; crop</em> a Screenshot</strong></p>
+**How to take *& crop* a Screenshot**
 
-<ul>
-  <li>Windows: <a href="www.ehow.com/how_6801557_crop-screen-shot.html">www.ehow.com/how_6801557_crop-screen-shot.html</a></li>
-  <li>Mac: <a href="http://www.ehow.com/how_4559274_take-edit-screen-shots-mac.html">http://www.ehow.com/how_4559274_take-edit-screen-shots-mac.html</a>
-    <ul>
-      <li>Make sure to use Command (⌘)-K rather than control-K as the article states.</li>
-    </ul>
-  </li>
-</ul>
+- Windows: [www.ehow.com/how_6801557_crop-screen-shot.html](www.ehow.com/how_6801557_crop-screen-shot.html)
+- Mac: [http://www.ehow.com/how_4559274_take-edit-screen-shots-mac.html](http://www.ehow.com/how_4559274_take-edit-screen-shots-mac.html)
+    - Make sure to use Command (⌘)-K rather than control-K as the article states.
 
-<!-- Allow 45 minutes for all? -->
 
-<h2 id="demonstration">Demonstration</h2>
 
-<p>Once you’ve finished doing the HW a single time, you can watch me do it:</p>
+<!-- Allow 45 minutes for all? 
+
+## Demonstration
+
+Once you've finished doing the HW a single time, you can watch me do it:
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/bMbr3Xpbgzk" frameborder="0" allowfullscreen=""></iframe>
+  <iframe  src="http://www.youtube.com/embed/bMbr3Xpbgzk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<h2 id="standard-practice-hw-caveats">Standard Practice HW Caveats</h2>
+## Standard Practice HW Caveats
 
-<p>You’ll learn significantly less from watching me solve the
-HW if you haven’t attempted the HW yourself first.</p>
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
 
-<p>While it’s an achievement to finish the HW no matter how long it takes, you
-might experience “diminishing returns” if you work longer than the DNF (Did Not Finish)
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
 time. Thus, it might be strategic to stop working at the DNF time and watch
-my solution.</p>
+my solution.
 
-<p>After watching my solution, I recommend that you repeat the HW if you
-have not achieved at least Av (Average) performance. If so, be sure to:</p>
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
 
-<ul>
-  <li>Delete your old project so you cannot refer to it;</li>
-  <li>Don’t look at my screencast while you HW; and</li>
-  <li>Reset your timer.</li>
-</ul>
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
 
-<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+Feel free to keep trying until you make Rx if that’s of interest to you.
 
-<h3 id="screenshot-of-my-final-unix-terminal">Screenshot of my final UNIX terminal:</h3>
+### Screenshot of my final UNIX terminal:
 
-<p><a href="terminalA.png"><img src="terminalA.png" width="400" /></a><br />
-<a href="terminalB.png"><img src="terminalB.png" width="400" /></a><br />
-<a href="terminalC.png"><img src="terminalC.png" width="400" /></a></p>
+<a href="terminalA.png"><img src="terminalA.png" width="400"/></a><BR>
+<a href="terminalB.png"><img src="terminalB.png" width="400"/></a><BR>
+<a href="terminalC.png"><img src="terminalC.png" width="400"/></a>
 
 <!--## Demonstration
 
@@ -275,40 +230,41 @@ Feel free to keep trying until you make Rx if that’s of interest to you.-->
 
 ### Solutions to Hardware Questions
 
-<a href="HardwareSolutions.png"><img src="HardwareSolutions.png" width="400"/></a>-->
+<a href="HardwareSolutions.png"><img src="HardwareSolutions.png" width="400"/></a>
 
-<h2 id="demonstration-1">Demonstration</h2>
 
-<p>Once you’ve finished doing the HW a single time, you can watch me do it:</p>
+
+
+## Demonstration
+
+Once you've finished doing the HW a single time, you can watch me do it:
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/NGK61X9ry9c" frameborder="0" allowfullscreen=""></iframe>
+  <iframe  src="http://www.youtube.com/embed/NGK61X9ry9c" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<h2 id="standard-practice-hw-caveats-1">Standard Practice HW Caveats</h2>
+## Standard Practice HW Caveats
 
-<p>You’ll learn significantly less from watching me solve the
-HW if you haven’t attempted the HW yourself first.</p>
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
 
-<p>While it’s an achievement to finish the HW no matter how long it takes, you
-might experience “diminishing returns” if you work longer than the DNF (Did Not Finish)
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
 time. Thus, it might be strategic to stop working at the DNF time and watch
-my solution.</p>
+my solution.
 
-<p>After watching my solution, I recommend that you repeat the HW if you
-have not achieved at least Av (Average) performance. If so, be sure to:</p>
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
 
-<ul>
-  <li>Delete your old project so you cannot refer to it;</li>
-  <li>Don’t look at my screencast while you HW; and</li>
-  <li>Reset your timer.</li>
-</ul>
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
 
-<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+Feel free to keep trying until you make Rx if that’s of interest to you.
 
-<h3 id="solutions-to-questions">Solutions to Questions</h3>
+### Solutions to Questions
 
-<p><a href="types.png"><img src="types.png" width="200" /></a></p>
+<a href="types.png"><img src="types.png" width="200"/></a>-->
 
 </div>
 
@@ -323,7 +279,7 @@ have not achieved at least Av (Average) performance. If so, be sure to:</p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-01-24 23:04:06 -0500</span></p>
+       Last update on: <span>2016-01-28 16:31:14 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
