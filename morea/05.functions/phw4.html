@@ -56,31 +56,93 @@
 <div class="container">
   <h1 id="hw-functions">HW: Functions</h1>
 
-<p><span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: &lt;5 min</span>
+<!--<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <5 min</span>
   <span style="padding: 2px" class="label label-info">Av: 5-10 min</span>
   <span style="padding: 2px" class="label label-warning">Sd: 10-20 min</span>
   <span style="padding: 2px" class="label label-danger">DNF: 20+ min</span>
+</span>
+-->
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;20 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 20-40 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 40-60 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 60+ min</span>
 </span></p>
 
-<h2 id="isoddpy">is_odd.py</h2>
+<h2 id="ismultiplepy">is_multiple.py</h2>
 
-<p>Write a function <code>is_odd</code> that takes a number as a parameter and returns true if the number is odd. Test that your function works by calling it twice, once with an odd and once with an even number. <em>Your program should <strong>not</strong> get any input from the user.</em></p>
+<p>Write a function <code>is_multiple</code> that takes a number and a multiple as parameters and returns true if the number is a multiple (i.e., if <code>number % multiple</code> is 0). Test that your function works by calling it twice, once with a multiple and once with a number that is not its multiple, and print the results. <em>Your program should <strong>not</strong> get any input from the user.</em></p>
 
-<h2 id="squarepy">square.py</h2>
+<p>For example:</p>
 
-<p>Create a program that draws a filled square of asterix characters, <strong>requesting the width from the user</strong>. Write a function <code>square</code> that takes the width as a parameter and prints a filled square.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>call</strong></th>
+      <th style="text-align: center"><strong>returns</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code>is_multiple(10, 5)</code></td>
+      <td style="text-align: center">True</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>is_multiple(10, 7)</code></td>
+      <td style="text-align: center">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>is_multiple(8, 4)</code></td>
+      <td style="text-align: center">True</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>is_multiple(8, 3)</code></td>
+      <td style="text-align: center">False</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>For example, a call to <code>square(3)</code> should output:</p>
+<h2 id="tipcalculatorpy">tip_calculator.py</h2>
+
+<p>Recall <code>tip.py</code> from <a href="/150/morea/04.python/pwod3.html">PHW3</a>. Copy <code>tip.py</code> into <code>tip_calculator.py</code>. Modify it by creating a function <code>calculate_total</code> that takes 3 parameters and returns the total for the meal. The 3 parameters are:</p>
+
+<ul>
+  <li><code>meal</code>: the cost of the meal</li>
+  <li><code>tax_rate</code>: the percent tax. For example, NJ tax would be 0.07.</li>
+  <li><code>tip_rate</code>: the percent tip. A 20% tip rate would be 0.20.</li>
+</ul>
+
+<p>Use the same calculations as in the prior practice HW (NOT the CodeAcademy exercise). Specifically, proper tipping technique dictates that the tip should be calculated based on the total cost of the meal, before tax is applied. Then, print out the total with 2 decimal places. Don’t forget the dollar sign ($)!</p>
+
+<p>Prompt the user to enter the cost of the meal, the tax rate, and the tip rate. Your final program should make two calls to <code>calculate_total</code>: one based on input from the user and one using the following call:</p>
+
+<pre><code>calculate_total(53.48, .07, .18)
+</code></pre>
+
+<p><em>Note that the total for the above meal with tax &amp; tip is $66.85.</em></p>
+
+<!--## is_odd.py
+
+Write a function `is_odd` that takes a number as a parameter and returns true if the number is odd. Test that your function works by calling it twice, once with an odd and once with an even number. *Your program should **not** get any input from the user.*-->
+
+<h2 id="rectanglepy">rectangle.py</h2>
+
+<p>Create a program that draws a filled rectangle of asterix characters, <strong>requesting the width and height from the user</strong>. Write a function <code>rectangle</code> that takes the width &amp; height as parameters and prints a filled square.</p>
+
+<p>For example, a call to <code>rectangle(3,5)</code> should output:</p>
 
 <pre><code>***
+***
+***
 ***
 ***
 </code></pre>
 
 <h3 id="submission">Submission</h3>
 
-<p>Once you’re satisfied that your programs are working correctly, take a screenshot of each program open in the editor, with its output displayed in the console, and submit to google classroom. You should submit 2 screenshots.</p>
+<p>Once you’re satisfied that your programs are working correctly, take a screenshot of each program open in the editor, with its output displayed in the console, and submit to google classroom. You should submit 3 screenshots.</p>
 
 <!-- Started @ 11:35 -->
 
@@ -97,7 +159,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-02-22 11:46:17 -0500</span></p>
+       Last update on: <span>2016-02-22 11:50:14 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
