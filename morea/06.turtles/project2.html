@@ -160,7 +160,7 @@ turtle.Screen().exitonclick()
 
 <p><img src="shapes.png" width="250" /></p>
 
-<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+<p><strong><em>Every submitted picture should look unique for the whole project.</em></strong></p>
 
 <p>Remember to declare all your functions at the <strong><em>top</em></strong> of the file, <strong><em>before</em></strong> you call them.</p>
 
@@ -170,7 +170,7 @@ turtle.Screen().exitonclick()
 
 <p><code>polygon(num_sides, length)</code>: takes the number of sides (<code>num_sides</code>) and the length of each side (<code>length</code>) as parameters. If the number of sides is less than 3, draw nothing.</p>
 
-<p><strong><em>Hint</em></strong>: To determine how far to turn your turtle, you will likely need to divide a multiple/factor of 360 (the number of degrees in a circle) by the number of sides.</p>
+<p><strong><em>Hint</em></strong>: To determine how far to turn your turtle, you will  need to <a href="http://www.mathsisfun.com/geometry/interior-angles-polygons.html">divide 360 (the number of degrees in a circle) by the number of sides</a>.</p>
 
 <p>Test that your function works by using a loop to draw a number of shapes in an interesting pattern. Here are some examples:</p>
 
@@ -180,18 +180,24 @@ turtle.Screen().exitonclick()
 
 <h3 id="starpolygonpy">star_polygon.py</h3>
 
-<p>We can use a similar technique to draw stars with an arbitrary number of points. Write a program <code>star_polygon.py</code> with the following function:</p>
+<p>We can use a similar technique to draw stars with an arbitrary number of points, called <a href="https://en.wikipedia.org/wiki/Regular_polygon#Regular_star_polygons">regular star polygons</a>. Write a program <code>star_polygon.py</code> with the following function:</p>
 
-<p><code>star_polygon(num_pts, num_skip, side_length)</code>: takes the number of points (<code>num_pts</code>), the number of points to skip to calculate the next angle (<code>num_skip</code>)  and the length of each line in the star (<code>side_length</code>) as parameters. <!--You will need a different approach to drawing the stars depending on if there is an odd or even number of points.--></p>
+<p><code>star_polygon(num_pts, num_skip, side_length)</code>: takes the number of points (<code>num_pts</code>), the number of points to skip to calculate the next angle (<code>num_skip</code>)  and the length of each line in the star (<code>side_length</code>) as parameters.</p>
+
+<p><strong><em>Hint</em></strong>: You can calculate the angle to turn your turtle by multiplying 360 by the number of points to skip, divided by the total number of points.</p>
+
+<!--You will need a different approach to drawing the stars depending on if there is an odd or even number of points.-->
 
 <!--***Hints***:
 
 - Implement the odd case first.  
-- How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version.
+- How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version. -->
 
-<img src="polygram.png" width="300">-->
+<p>Here are some examples:</p>
 
-<p><strong><em>Every submitted picture should look unique for the whole project.</em></strong></p>
+<p><img src="polygram.png" width="300" /></p>
+
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
 
 <!--Even-sided stars can be drawn as two separate polygons with half the number of points. For example, a six-sided star can be drawn as two triangles. In between drawing these two polygons, you may find it useful to move your turtle:
 
@@ -245,11 +251,13 @@ tree(200, 45)
 
 <p>Our final recursive program does not make use of turtle. Instead, it will use recursion to calculate the <em>n<sup>th</sup></em> <a href="http://www.mathsisfun.com/numbers/fibonacci-sequence.html">fibonacci number</a>. A fibonacci number is calculated by adding the two numbers that come before it in the sequence. Think about what the recursive step will look like. Assume the sequence starts at 0 (for n = 0). How many base cases are need?</p>
 
-<p>Write a program <code>fibonacci.py</code> with the following function:</p>
+<p>Write a program <code>fibonacci.py</code> with the following functions:</p>
 
 <p><code>fibonacci(n)</code>: takes the fibonacci sequence number (<code>n</code>) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented recursively.</p>
 
-<p>Test that your function works by getting a number (<code>n</code>) <strong>as input from the user</strong> and printing the result of calling your fibonacci function. <strong>Note:</strong> this is the <strong><em>only</em></strong> program in this project that should take user input.</p>
+<p><code>fibonacci_list(n)</code>: takes the fibonacci sequence number (<code>n</code>) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented iteratively using a list.</p>
+
+<p>Test that your functions work by getting a number (<code>n</code>) <strong>as input from the user</strong> and printing the result of calling your fibonacci function. <strong>Note:</strong> this is the <strong><em>only</em></strong> program in this project that should take user input.</p>
 
 <h2 id="grading">Grading</h2>
 
@@ -268,15 +276,15 @@ tree(200, 45)
 <p>When complete, your project should include the following six python programs:</p>
 
 <ul>
-  <li><code>basic_shapes.py</code></li>
+  <li><code>shapes.py</code></li>
   <li><code>polygon.py</code></li>
-  <li><code>polygram.py</code></li>
+  <li><code>star_polygon.py</code></li>
   <li><code>spiral.py</code></li>
   <li><code>tree.py</code></li>
   <li><code>fibonacci.py</code></li>
 </ul>
 
-<p>Zip your project using the same steps as for the practice HWs, giving the zip file the same name as your <code>project2-uLogin1_uLogin2</code> folder name, and submit to google classroom.</p>
+<p>Zip your project using the same steps as for the earlier project, giving the zip file the same name as your <code>project2_uLogin</code> folder name, and submit to google classroom.</p>
 
 </div>
 
@@ -291,7 +299,7 @@ tree(200, 45)
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-02-25 10:51:06 -0500</span></p>
+       Last update on: <span>2016-02-25 16:01:53 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
