@@ -58,7 +58,7 @@
 
 <p><em>In the beginning of the semester we drew interesting shapes on code.org. In this project, we will use python’s <a href="https://docs.python.org/3.4/library/turtle.html">turtle module</a> to draw shapes both iteratively and recursively. In this project, we will use loops, functions, conditions, and variables to draw pictures with the python turtle package.</em></p>
 
-<p><em><strong>You must work with a partner (unless granted permission in advance)</strong>; make sure both students are clearly identified in the comments at the top of each program.</em></p>
+<!--***You must work with a partner (unless granted permission in advance)**; make sure both students are clearly identified in the comments at the top of each program.*-->
 
 <p>An important skill as a computer scientist is the ability to learn how to use an existing API library by reading documentation, finding good API usage examples on the internet, and adapting those examples to meet your needs. In this project, you will begin building these skills to help you make the transition from classroom to practice.</p>
 
@@ -67,7 +67,7 @@
 <ul>
   <li>Detailed project description (this page)</li>
   <li><a href="https://docs.python.org/3.4/library/turtle.html#overview-of-available-turtle-and-screen-methods">Python turtle documentation</a></li>
-  <li>May need to use <code>python</code> (rather than <code>python3</code>) to run your turtle programs</li>
+  <li>Create a new project in PyCharm with the name <code>project2_uLogin</code>, where you replace “<code>uLogin</code>” with the beginning of your Drew e-mail address before the <code>@</code> symbol</li>
 </ul>
 
 <p>If you get stuck, please e-mail me a zip file of your project, a screenshot, and a description of:</p>
@@ -77,13 +77,13 @@
   <li>What is actually happening</li>
 </ol>
 
-<!--If you are not able to complete the assignment by 3/16, be prepared to give a detailed progress update during class instead.-->
+<p>The assignment is broken down into checkpoints. The final submission must include the zip file of all the code, but the prior check points can simply be screenshots.</p>
 
 <h1 id="instructions">Instructions</h1>
 
-<p>Create a folder <code>project2-uLogin1_uLogin2</code>, replacing the uLogins with the e-mail ids of you and your partner. </p>
-
-<h2 id="part-1-learn-how-to-work-with-turtles">Part 1: Learn how to work with turtles</h2>
+<!--Create a folder `project2-uLogin1_uLogin2`, replacing the uLogins with the e-mail ids of you and your partner. 
+-->
+<p>## Part 1: Learn how to work with turtles</p>
 
 <h3 id="draw-a-line">1. Draw a line</h3>
 
@@ -130,27 +130,33 @@ turtle.Screen().exitonclick()
 
 <p><img src="squares.png" width="300" /></p>
 
-<p>Now you’re ready to tackle the rest of the assignment. To speed up testing, set the turtle speed to be 0. <strong><em>None of the following turtle programs should take user input!</em></strong></p>
+<p>Now you’re ready to tackle the rest of the assignment. To speed up testing, set the turtle speed to be 0. </p>
 
-<h2 id="part-2-functions--recursion">Part 2: Functions &amp; Recursion</h2>
+<h3 id="submitting-part-1">Submitting Part 1</h3>
 
-<h3 id="basicshapespy">basic_shapes.py</h3>
+<p>Once you’re satisfied that your program is working correctly, take a screen shot of your two squares code and the two squares display and submit it to Google classroom.</p>
 
-<p>Create a program <code>basic_shapes.py</code> that implements the following functions. You may find <a href="http://www.mathsisfun.com/geometry/interior-angles-polygons.html">this webpage</a> to be helpful.</p>
+<h2 id="part-2-functions">Part 2: Functions</h2>
+
+<p><strong><em>None of the following turtle programs should take user input!</em></strong></p>
+
+<h3 id="shapespy">shapes.py</h3>
+
+<p>Create a program <code>shapes.py</code> that implements the following functions. You may find <a href="http://www.mathsisfun.com/geometry/interior-angles-polygons.html">this webpage</a> to be helpful.</p>
 
 <ol>
   <li><code>rectangle(width, height)</code>: takes the length of the width and height as parameters.</li>
   <li><code>square(side)</code>: takes the length of a side as a parameter. <strong>Implement this by calling the <code>rectangle</code> function</strong>.</li>
   <li><code>triangle(side)</code>: takes the length of a side as a parameter and draws an equilateral triangle.</li>
-  <li><code>octagon(side)</code>: takes the length of a side as a parameter and draws an octagon.</li>
+  <li><code>decagon(side)</code>: takes the length of a side as a parameter and draws a decagon.</li>
 </ol>
 
-<!--
+<!--1.	`octagon(side)`: takes the length of a side as a parameter and draws an octagon.
 1.	`hexagon(side)`: takes the length of a side as a parameter and draws an hexagon.
 1.	`pentagon(side)`: takes the length of a side as a parameter and draws an pentagon.
 -->
 
-<p>Test that your functions work by clearly drawing a square, rectangle, triangle, and octagon on the screen. They shouldn’t overlap too much. For example:</p>
+<p>Test that your functions work by clearly drawing a square, rectangle, triangle, and decagon on the screen. They shouldn’t overlap too much. For example:</p>
 
 <p><img src="shapes.png" width="250" /></p>
 
@@ -172,28 +178,32 @@ turtle.Screen().exitonclick()
 
 <p><strong><em>Every submitted picture should look unique.</em></strong></p>
 
-<h3 id="polygrampy">polygram.py</h3>
+<h3 id="starpolygonpy">star_polygon.py</h3>
 
-<p>We can use a similar technique to draw stars with an arbitrary number of points. Write a program <code>polygram.py</code> with the following function:</p>
+<p>We can use a similar technique to draw stars with an arbitrary number of points. Write a program <code>star_polygon.py</code> with the following function:</p>
 
-<p><code>polygram(num_pts, length)</code>: takes the number of points (<code>num_pts</code>) and the length of each line in the star (<code>length</code>) as parameters. You will need a different approach to drawing the stars depending on if there is an odd or even number of points.</p>
+<p><code>star_polygon(num_pts, num_skip, side_length)</code>: takes the number of points (<code>num_pts</code>), the number of points to skip to calculate the next angle (<code>num_skip</code>)  and the length of each line in the star (<code>side_length</code>) as parameters. <!--You will need a different approach to drawing the stars depending on if there is an odd or even number of points.--></p>
 
-<p><strong><em>Hints</em></strong>:</p>
+<!--***Hints***:
 
-<ul>
-  <li>Implement the odd case first.  </li>
-  <li>How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version.</li>
-</ul>
+- Implement the odd case first.  
+- How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version.
 
-<p><img src="polygram.png" width="300" /></p>
+<img src="polygram.png" width="300">-->
 
-<p><strong><em>Every submitted picture should look unique.</em></strong></p>
+<p><strong><em>Every submitted picture should look unique for the whole project.</em></strong></p>
 
-<p>Even-sided stars can be drawn as two separate polygons with half the number of points. For example, a six-sided star can be drawn as two triangles. In between drawing these two polygons, you may find it useful to move your turtle:</p>
+<!--Even-sided stars can be drawn as two separate polygons with half the number of points. For example, a six-sided star can be drawn as two triangles. In between drawing these two polygons, you may find it useful to move your turtle:
 
-<p><img src="polygram-code.png" width="300" /></p>
+<img src="polygram-code.png" width="300">
+ 
+Test that your function works by drawing at least an even- and odd-pointed star. You should have ***one*** function called `polygram` that is capable of drawing ***both*** even- & odd-pointed stars. However, feel free to delegate the responsibility of drawing odd- and even-pointed stars by writing separate functions ***called*** by `polygram`.-->
 
-<p>Test that your function works by drawing at least an even- and odd-pointed star. You should have <strong><em>one</em></strong> function called <code>polygram</code> that is capable of drawing <strong><em>both</em></strong> even- &amp; odd-pointed stars. However, feel free to delegate the responsibility of drawing odd- and even-pointed stars by writing separate functions <strong><em>called</em></strong> by <code>polygram</code>.</p>
+<h3 id="submitting-part-2">Submitting Part 2</h3>
+
+<p>Once you’re satisfied that your programs are working correctly, take a screen shot of each program and the display when it’s run and submit it to Google classroom.</p>
+
+<h2 id="part-3-recursion">Part 3: Recursion</h2>
 
 <h3 id="spiralpy">spiral.py</h3>
 
@@ -281,7 +291,7 @@ tree(200, 45)
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-02-24 12:33:55 -0500</span></p>
+       Last update on: <span>2016-02-25 10:51:06 -0500</span></p>
     <p style="margin: 0">
       12 modules
       
