@@ -54,40 +54,100 @@
 
 
 <div class="container">
-  <h1 id="hw-for-loops--lists">HW: For loops &amp; lists</h1>
+  <h1 id="hw-recursion-iii">HW: Recursion III</h1>
 
-<p>In this HW you will create 2 programs that use for loops &amp; lists.</p>
+<!--In this practice HW you will create 2 programs that take code we've previously written for other PHWs and turn them into functions.-->
 
-<p><span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: &lt;15 min</span>
+<!--<span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: <15 min</span>
   <span style="padding: 2px" class="label label-info">Av: 15-30 min</span>
   <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
   <span style="padding: 2px" class="label label-danger">DNF: 45+ min</span>
-</span></p>
+</span>
+-->
 
-<h2 id="helloloopspy">hello_loops.py</h2>
+<h2 id="trianglepy">triangle.py</h2>
 
-<p>Create a program that does the following:</p>
+<p>Assume we have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. Write a function <code>triangle</code> which takes the number of rows as a parameter and calculates the number of blocks that make up the triangle. You should implement this function: (a) Recursively, and (b) Iteratively.</p>
 
-<ol>
-  <li>Print the numbers from 1 to 10 (inclusive). Each number should be on a separate line.</li>
-  <li>Print the multiples of 5 from 10 through -25 (inclusive) on the same line. The numbers should each be separated by a space. (<em>Hint</em>: use the <code>end</code> parameter to the print function like we did in class; see loop_fun.py.) Don’t forget to print a newline after this loop by calling <code>print()</code> with no parameters.</li>
-  <li>Print the multiples of 3 from -3 to 21 (inclusive). Each number should be separated by a comma and a space. There should not be a comma after the final number (21). </li>
-  <li>Create a list of 5 book titles. Write python code to print <code>"I would like to read"</code> followed by the 5 book titles. Each title should be quoted.</li>
-</ol>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong># of rows (parameter)</strong></th>
+      <th style="text-align: center"><strong># of Blocks</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">6</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">15</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="averagepy">average.py</h2>
+<p>Test that both functions return the same value when called with the same parameters. </p>
 
-<p>Create a program that calculates the average of 10 real (i.e., decimal) numbers entered by the user. Make sure you ask (i.e., prompt) the user to enter each number (the user will hit enter after each number). <!--Note you will need two numbers to calculate the average: the sum and the number of numbers entered by the user (10).--></p>
+<h2 id="nox">nox</h2>
+
+<p>Write a function <code>nox</code> that takes a string as a parameter and removes all ‘x’ characters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Parameter (input)</strong></th>
+      <th style="text-align: center"><strong>Returns (output)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">“xendxstartx”</td>
+      <td style="text-align: center">“endstart”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">“endx”</td>
+      <td style="text-align: center">“end”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">“xstart”</td>
+      <td style="text-align: center">“start”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">“xxxx”</td>
+      <td style="text-align: center">””</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You should implement this function: (a) Recursively, and (b) Iteratively. Test that both functions return the same value when called with the same parameters. </p>
 
 <!--## Demonstration
-
 
 Once you've finished doing the HW a single time, you can watch me do it:
 
 <div class="video-container">
-  <iframe  src="http://www.youtube.com/embed/lexkpbllvT0" frameborder="0" allowfullscreen></iframe>
+  <iframe  src="http://www.youtube.com/embed/nTb-SeIGMCM" frameborder="0" allowfullscreen></iframe>
 </div>
+
+### Solution for `text_steps` loop:
+    def step_loop(txt):
+	    for i in range(len(txt)):
+		    print(txt[i:])
 
 ## Standard Practice HW Caveats
 
@@ -107,6 +167,10 @@ have not achieved at least Av (Average) performance. If so, be sure to:
   * Reset your timer.
 
 Feel free to keep trying until you make Rx if that’s of interest to you.-->
+
+<h3 id="submission">Submission</h3>
+
+<p>Once you’re satisfied that your programs are working correctly, take a screenshot of each program open in the editor, with its output displayed in the console, and submit to google classroom. You should submit 2 screenshots.</p>
 
 </div>
 
