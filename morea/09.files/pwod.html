@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> PHW10 | CSCI 150 </title>
+  <title> HW | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,9 +54,9 @@
 
 
 <div class="container">
-  <h1 id="practice-hw10-files--while">Practice HW10: Files &amp; While</h1>
+  <h1 id="hw-files--while">HW: Files &amp; While</h1>
 
-<p>In this practice HW you will create 3 programs that get input/output from files and use while loops. </p>
+<p>In this HW you will create 3 programs that get input/output from files and use while loops. </p>
 
 <p><span class="h4">
   <span style="padding: 2px" class="label label-success">Rx: &lt;15 min</span>
@@ -119,57 +119,55 @@ while value != sentinel:
 
 <p><strong><em>Hints:</em></strong></p>
 
+<!--  * In UNIX you can get the number of lines in a file using the word count command: `wc -l [filename]`. This will allow you to test that your code is working correctly.-->
 <ul>
-  <li>In UNIX you can get the number of lines in a file using the word count command: <code>wc -l [filename]</code>. This will allow you to test that your code is working correctly.</li>
   <li>You should add the file names <code>text1.txt</code>, <code>text2.txt</code>, and <code>text3.txt</code> to a list, so you don’t have to copy &amp; paste your code.</li>
 </ul>
 
-<h2 id="demonstration">Demonstration</h2>
+<!--## Demonstration
 
-<p>Once you’ve finished doing the HW a single time, you can watch me do it for <code>while.py</code> and <code>count.py</code>:</p>
+
+Once you've finished doing the HW a single time, you can watch me do it for `while.py` and `count.py`:
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/2GkDAxZOnt8" frameborder="0" allowfullscreen=""></iframe>
+  <iframe  src="http://www.youtube.com/embed/2GkDAxZOnt8" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<p>My solution for <code>lines.py</code>:</p>
+My solution for `lines.py`:
 
-<pre><code>file_list = ["text1.txt", "text2.txt", "text3.txt"]
+	file_list = ["text1.txt", "text2.txt", "text3.txt"]
+	
+	count = open("counts.txt", "w")
+	
+	for file in file_list:
+		 f = open(file)
+		 num = sum(1 for line in f)
+		 # [filename]: [the number of lines in the file]
+		 print(file , ":" , num, file=count)
+		 #count.write(file + ": " + str(num) + "\n")
+		 f.close()
+	
+	count.close()
 
-count = open("counts.txt", "w")
+## Standard Practice HW Caveats
 
-for file in file_list:
-	 f = open(file)
-	 num = sum(1 for line in f)
-	 # [filename]: [the number of lines in the file]
-	 print(file , ":" , num, file=count)
-	 #count.write(file + ": " + str(num) + "\n")
-	 f.close()
+You’ll learn significantly less from watching me solve the
+HW if you haven’t attempted the HW yourself first.
 
-count.close()
-</code></pre>
-
-<h2 id="standard-practice-hw-caveats">Standard Practice HW Caveats</h2>
-
-<p>You’ll learn significantly less from watching me solve the
-HW if you haven’t attempted the HW yourself first.</p>
-
-<p>While it’s an achievement to finish the HW no matter how long it takes, you
-might experience “diminishing returns” if you work longer than the DNF (Did Not Finish)
+While it's an achievement to finish the HW no matter how long it takes, you
+might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
 time. Thus, it might be strategic to stop working at the DNF time and watch
-my solution.</p>
+my solution.
 
-<p>After watching my solution, I recommend that you repeat the HW if you
-have not achieved at least Av (Average) performance. If so, be sure to:</p>
+After watching my solution, I recommend that you repeat the HW if you
+have not achieved at least Av (Average) performance. If so, be sure to:
 
-<ul>
-  <li>Delete your old project so you cannot refer to it;</li>
-  <li>Don’t look at my screencast while you HW; and</li>
-  <li>Reset your timer.</li>
-</ul>
+  * Delete your old project so you cannot refer to it;
+  * Don’t look at my screencast while you HW; and
+  * Reset your timer.
 
-<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
-
+Feel free to keep trying until you make Rx if that’s of interest to you.
+-->
 
 </div>
 
@@ -184,7 +182,7 @@ have not achieved at least Av (Average) performance. If so, be sure to:</p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-03-18 13:03:53 -0400</span></p>
+       Last update on: <span>2016-03-25 12:46:13 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
