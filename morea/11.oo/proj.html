@@ -132,7 +132,7 @@
         return False
 </code></pre>
 
-<p>You should also create a file <code>main.py</code> that you will use to test that your Date class works correctly. Make sure this file includes a main function that is called like we did in <code>card.py</code>.</p>
+<p>You should also create a file <code>main.py</code> that you will use to test that your <code>Date</code> class works correctly. Make sure this file includes a main function that is called like we did in <code>card.py</code>.</p>
 
 <h3 id="understanding-date">Understanding <code>Date</code></h3>
 
@@ -157,13 +157,13 @@
 <pre><code>s =  "%02d/%02d/%04d" % (self.month, self.day, self.year)
 </code></pre>
 
-<p>in the <code>repr</code> method. This constructs a string with the month, day, and the year, formatted very nicely to have exactly two digits places for the month, two digit places for the day, and four for the year.</p>
+<p>in the <code>repr</code> method. This constructs a string with the month, day, and the year, formatted very nicely to have exactly two digit places for the month, two digit places for the day, and four for the year.</p>
 
-<p>We’ve also defined our own <code>isLeapYear</code> method. There are no double-underscores here, because Python didn’t “expect” this method, but it certainly doesn’t “object” to it either. (Clearly our puns have no <em>class</em>!)</p>
+<p>We’ve also defined our own <code>isLeapYear</code> method. There are no double-underscores here, because Python didn’t “expect” this method, but it certainly doesn’t “object” to it either. (Clearly these puns have no <em>class</em>!)</p>
 
 <h4 id="note-on-method">Note on “method”:</h4>
 
-<p>Traditionally, functions called by objects are called <em>methods</em>. There is no really good reason for this. They are just like functions—-the only thing special about them is that they are defined in a class and they are called after a dot or period following the name of an object. For example, try these:</p>
+<p>Traditionally, functions called by objects are called <em>methods</em>. There is no really good reason for this. They are just like functions–the only thing special about them is that they are defined in a class and they are called after a dot or period following the name of an object. For example, try these in the python console:</p>
 
 <pre><code>&gt;&gt;&gt; from date import *
 &gt;&gt;&gt; d = Date(4, 7, 2015)
@@ -187,11 +187,11 @@ False
 
 <p>This is why <code>self</code> is always the first argument to all of the methods in the <code>Date</code> class (and in any class that you define): because <code>self</code> is how the method can access the individual data members in the object that called it.</p>
 
-<p><strong>Please notice also:</strong> this means that a method always has at least one argument, namely <code>self</code>. However, this value is passed in implicitly when the method is called. For example, <code>isLeapYear</code> is invoked in the example above as <code>Date(1,1,1900).isLeapYear()</code>, and Python automatically passed self, in this case the object <code>Date(1,1,1900)</code>, as the first argument to the <code>isLeapYear</code> method.</p>
+<p><strong>Please notice also:</strong> this means that a method always has at least one argument, namely <code>self</code>. However, this value is passed  implicitly when the method is called. For example, <code>isLeapYear</code> is invoked in the example above as <code>Date(1,1,1900).isLeapYear()</code>, and Python automatically passed self, in this case the object <code>Date(1,1,1900)</code>, as the first argument to the <code>isLeapYear</code> method.</p>
 
 <h4 id="testing-your-initial-date-class">Testing your initial <code>Date</code> class:</h4>
 
-<p>Just to get a feel for how to test your new datatype, try out the following calls:</p>
+<p>Just to get a feel for how to test your new datatype, try out the following calls in the python console:</p>
 
 <pre><code># create an object named d with the constructor
 &gt;&gt;&gt; d = Date(4, 7, 2015)  # use another day if you prefer...
@@ -239,7 +239,7 @@ True
 
 <h4 id="copy-and-equals">copy and equals</h4>
 
-<p>Add the following code to your <code>Date</code> class and then test that it works.</p>
+<p>Add the following code to your <code>Date</code> class and then test that it works:</p>
 
 <pre><code>def copy(self):
     """ Returns a new object with the same month, day, year
@@ -437,7 +437,7 @@ False                           # so it should be False
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-04-22 14:36:35 -0400</span></p>
+       Last update on: <span>2016-04-22 17:05:23 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
