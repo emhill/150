@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> HW11 | CSCI 150 </title>
+  <title> Project 4 | CSCI 150 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -54,17 +54,17 @@
 
 
 <div class="container">
-  <h1 id="hw11-objects-in-python">HW11: Objects in Python</h1>
+  <h1 id="project-4-objects-in-python">Project 4: Objects in Python</h1>
 
-<p>In this practice HW you will implement the <code>Date</code> class we began during lecture.</p>
+<p>In this project you will implement a text-based card game as well as the <code>Date</code> class we began during lecture. You may work in a team of 2-3 people, or alone.</p>
 
-<!--<span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: <45 min</span>
-  <span style="padding: 2px" class="label label-info">Av: 45-90 min</span>
-  <span style="padding: 2px" class="label label-warning">Sd: 90-135 min</span>
-  <span style="padding: 2px" class="label label-danger">DNF: 135+ min</span>
-</span>
--->
+<h2 id="part-a-card-game">Part A: Card Game</h2>
+
+<p>Using the <code>Card</code> class we went over in lecture (see <code>card.py</code>), create a file <code>game.py</code> that implements a basic card game. It can either require 2 players or 1 player and the computer. <strong>Every game <em>must</em> be unique.</strong></p>
+
+<p>Your <code>game.py</code> program must include a main method as we went over in class (see <code>card.py</code>). You are encouraged to think about creating additional classes besides <code>Card</code> that might help implement your game, such as <code>Deck</code> or <code>Hand</code>, but this is not a formal requirement.</p>
+
+<h2 id="part-b-date">Part B: Date</h2>
 
 <p>Begin by creating a file <code>date.py</code>:</p>
 
@@ -104,7 +104,9 @@
         return False
 </code></pre>
 
-<h2 id="understanding-date">Understanding <code>Date</code></h2>
+<p>You should also create a file <code>main.py</code> that you will use to test that your Date class works correctly. Make sure this file includes a main function that is called like we did in <code>card.py</code>.</p>
+
+<h3 id="understanding-date">Understanding <code>Date</code></h3>
 
 <p>Notice that in this <code>Date</code> class there are three <strong><em>data members</em></strong>:</p>
 
@@ -116,7 +118,7 @@
 
 <p>Note that <code>self</code> is used to denote <strong><em>any</em></strong> object (that is, any variable or value) of class <code>Date</code>.</p>
 
-<h3 id="methods-are-just-functions">Methods are just functions…</h3>
+<h4 id="methods-are-just-functions">Methods are just functions…</h4>
 
 <p>Object-oriented programming tends to have some of its own names for familiar things. For example, <em>method</em> is the “OOP” name for <em>function</em>. In particular, a <em>method</em> is a function whose first argument is <code>self</code>.</p>
 
@@ -131,7 +133,7 @@
 
 <p>We’ve also defined our own <code>isLeapYear</code> method. There are no double-underscores here, because Python didn’t “expect” this method, but it certainly doesn’t “object” to it either. (Clearly our puns have no <em>class</em>!)</p>
 
-<h3 id="note-on-method">Note on “method”:</h3>
+<h4 id="note-on-method">Note on “method”:</h4>
 
 <p>Traditionally, functions called by objects are called <em>methods</em>. There is no really good reason for this. They are just like functions—-the only thing special about them is that they are defined in a class and they are called after a dot or period following the name of an object. For example, try these:</p>
 
@@ -148,7 +150,7 @@ True
 False
 </code></pre>
 
-<h3 id="whats-up-with-self">What’s up with <code>self</code>?</h3>
+<h4 id="whats-up-with-self">What’s up with <code>self</code>?</h4>
 <p>One odd thing about the above example is that <strong>three different objects</strong> of type <code>Date</code> are calling the <em>same</em> <code>isLeapYear</code> code. How does the <code>isLeapYear</code> method tell the different objects apart? </p>
 
 <p>The method <strong>does not</strong> know the name of the variable that calls it! In fact, in the third example, there is <em>no</em> variable name! </p>
@@ -159,7 +161,7 @@ False
 
 <p><strong>Please notice also:</strong> this means that a method always has at least one argument, namely <code>self</code>. However, this value is passed in implicitly when the method is called. For example, <code>isLeapYear</code> is invoked in the example above as <code>Date(1,1,1900).isLeapYear()</code>, and Python automatically passed self, in this case the object <code>Date(1,1,1900)</code>, as the first argument to the <code>isLeapYear</code> method.</p>
 
-<h3 id="testing-your-initial-date-class">Testing your initial <code>Date</code> class:</h3>
+<h4 id="testing-your-initial-date-class">Testing your initial <code>Date</code> class:</h4>
 
 <p>Just to get a feel for how to test your new datatype, try out the following calls:</p>
 
@@ -207,7 +209,7 @@ False
 True
 </code></pre>
 
-<h3 id="copy-and-equals">copy and equals</h3>
+<h4 id="copy-and-equals">copy and equals</h4>
 
 <p>Add the following code to your <code>Date</code> class and then test that it works.</p>
 
@@ -295,15 +297,15 @@ False                           # so it should be False
 
 <p>Now, the next part of the lab asks you to implement a few methods for the Date class from scratch.</p>
 
-<h2 id="modifications">Modifications</h2>
+<h3 id="modifications">Modifications</h3>
 
 <p>Add the following methods to your <code>Date</code> class. Be sure to add a docstring to each of the methods you write. (Recall that the term method refers to a function that is a member of a user-defined class.)</p>
 
-<h3 id="isafterself-d2">isAfter(self, d2)</h3>
+<h4 id="isafterself-d2">isAfter(self, d2)</h4>
 
 <p>This method should return whether (True/False) <code>Date d2</code> is after <code>Date self</code>. <em>Hint</em>: see the <code>isBefore</code> example from class.</p>
 
-<h3 id="tomorrowself">tomorrow(self)</h3>
+<h4 id="tomorrowself">tomorrow(self)</h4>
 
 <p>This method should <strong>NOT RETURN ANYTHING</strong>. Rather, it should change the calling object so that it represents one calendar day after the date it originally represented. This means that <code>self.day</code> will definitely change. What’s more, <code>self.month</code> and <code>self.year</code> might change.</p>
 
@@ -327,7 +329,7 @@ False                           # so it should be False
 03/01/2016
 </code></pre>
 
-<h3 id="addndaysself-n">addNDays(self, N)</h3>
+<h4 id="addndaysself-n">addNDays(self, N)</h4>
 
 <p>This method only needs to handle nonnegative integer arguments <code>N</code>. Like the <code>tomorrow</code> method, this method should not return anything. Rather, it should <strong><em>change</em></strong> the calling object so that it represents <code>N</code> calendar days <em>after</em> the date it originally represented. </p>
 
@@ -361,34 +363,37 @@ False                           # so it should be False
 
 <p>You can check your own date arithmetic with this website: <a href="http://www.timeanddate.com/date/dateadd.html">http://www.timeanddate.com/date/dateadd.html</a>.</p>
 
+<h4 id="main">main</h4>
+
+<p>Make sure your main class tests all the functionality that you have implemented: <code>isAfter</code>, <code>tomorrow</code>, <code>addNDays</code>. How do you know if your methods are implemented correctly? Does running each method once verify their correctness, or do you need to run them multiple times? For example, there are many different scenarios that can occur for the end of a month or the end of a year (leap year or not). Make sure you test all the cases you can think of.</p>
+
 <p><em>Assignment adapted from <a href="https://www.cs.hmc.edu/twiki/bin/view/CS5/Lab10">Harvey Mudd’s CS 5 Virtual Art Lab</a>.</em></p>
 
-<!--## Demonstration
+<h1 id="grading">Grading</h1>
 
-Once you've finished doing the HW a single time, you can watch me do it:
+<p>You will be graded on the following:</p>
 
-<div class="video-container">
-  <iframe  src="http://www.youtube.com/embed/FMj6DvHxJw8" frameborder="0" allowfullscreen></iframe>
-</div>
+<ul>
+  <li><strong>Correctness</strong>: Your code should perform as specified. Correctness will count for the largest portion of your grade.</li>
+  <li><strong>Testing</strong>: How well did you verify that your program meets the specification? This will be the second largest portion of your grade.</li>
+  <li><strong>Docstrings</strong>: For each class &amp; method that you design from scratch, write a good docstring (<code>"""</code>). </li>
+  <li><strong>Internal comments</strong>: Within functions, the more complicated parts of your code should also be described using “internal” comments (i.e., docstrings).</li>
+  <li><strong>Programming style</strong>: Your variable names should be meaningful and your code as simple and clear as possible.</li>
+  <li><strong>Formatting style</strong>: Each line should be less than 80 characters long including spaces. You should break up long lines using <code>\</code>. </li>
+</ul>
 
-## Standard Practice HW Caveats
+<h1 id="submitting">Submitting</h1>
 
-You’ll learn significantly less from watching me solve the
-HW if you haven’t attempted the HW yourself first.
+<p>When complete, your project should include the following python files:</p>
 
-While it's an achievement to finish the HW no matter how long it takes, you
-might experience "diminishing returns" if you work longer than the DNF (Did Not Finish)
-time. Thus, it might be strategic to stop working at the DNF time and watch
-my solution.
+<ul>
+  <li><code>card.py</code></li>
+  <li><code>game.py</code></li>
+  <li><code>date.py</code></li>
+  <li><code>main.py</code></li>
+</ul>
 
-After watching my solution, I recommend that you repeat the HW if you
-have not achieved at least Av (Average) performance. If so, be sure to:
-
-  * Delete your old project so you cannot refer to it;
-  * Don’t look at my screencast while you HW; and
-  * Reset your timer.
-
-Feel free to keep trying until you make Rx if that’s of interest to you.-->
+<p>Zip your project using the same steps as for the earlier project, giving the zip file the same name as your <code>project4_uLogin</code> folder name, and submit to google classroom.</p>
 
 
 </div>
