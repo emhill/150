@@ -98,43 +98,60 @@
 
 <h2 id="convertpy">convert.py</h2>
 
-<p>Create a program <code>convert.py</code>, that takes a measurement in inches as input and outputs the equivalent length in centimeters. Your program should have 2 variables:</p>
+<p>Create a program <code>convert.py</code>, that takes a temperature in degrees Fahrenheit as input and outputs the equivalent temperature in degrees Celsius. Your program should have 2 variables:</p>
 
 <ul>
-  <li><code>inches</code>: holds the length in inches (input from the user)</li>
-  <li><code>cm</code>: holds the length in centimeters. To convert inches to cm, multiply by 2.54.</li>
+  <li><code>degrees_f</code>: holds a temperature in degrees fahrenheit (input from the user)</li>
+  <li><code>degrees_c</code>: holds the temperature in degrees celsius. To convert fahrenheit to celsius, deduct 32 from the fahrenheit temperature and multiply by 5/9.</li>
 </ul>
 
-<p>Your program shold print the values of both variables with a string description, such as: <code>"I inches = C cm"</code>, replacing I &amp; C with the values of your variables.</p>
+<p>Your program should print the values of both variables with a string description, such as: <code>"F degrees fahrenheit = C degrees celsius"</code>, replacing F &amp; C with the values of your variables.</p>
 
 <p>For example:</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>inches</strong></th>
-      <th style="text-align: center"><strong>cm</strong></th>
+      <th style="text-align: center"><strong>degrees_f</strong></th>
+      <th style="text-align: center"><strong>degrees_c</strong></th>
       <th style="text-align: center"><strong>output</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">2.54</td>
-      <td style="text-align: center">1 inches = 2.54 cm</td>
+      <td style="text-align: center">86</td>
+      <td style="text-align: center">30</td>
+      <td style="text-align: center">86 degrees fahrenheit = 30 degrees celsius</td>
     </tr>
     <tr>
-      <td style="text-align: center">12</td>
-      <td style="text-align: center">30.48</td>
-      <td style="text-align: center">12 inches = 30.48 cm</td>
+      <td style="text-align: center">72</td>
+      <td style="text-align: center">22</td>
+      <td style="text-align: center">72 degrees fahrenheit = 22 degrees celsius</td>
     </tr>
     <tr>
-      <td style="text-align: center">39.5</td>
-      <td style="text-align: center">100.33</td>
-      <td style="text-align: center">39.5 inches = 100.33 cm</td>
+      <td style="text-align: center">32</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">32 degrees fahrenheit = 0 degrees celsius</td>
     </tr>
   </tbody>
 </table>
+
+<!--## convert.py
+
+Create a program `convert.py`, that takes a measurement in inches as input and outputs the equivalent length in centimeters. Your program should have 2 variables:
+
+  * `inches`: holds the length in inches (input from the user)
+  * `cm`: holds the length in centimeters. To convert inches to cm, multiply by 2.54.
+
+Your program shold print the values of both variables with a string description, such as: `"I inches = C cm"`, replacing I & C with the values of your variables.
+
+For example:
+
+| **inches** | **cm** | **output** |
+|:---:|:---:|:---:|
+| 1 | 2.54 | 1 inches = 2.54 cm |
+| 12 | 30.48 | 12 inches = 30.48 cm |
+| 39.5 | 100.33 | 39.5 inches = 100.33 cm |-->
 
 <h2 id="funpy">fun.py</h2>
 
@@ -143,19 +160,25 @@
 <ol>
   <li>The ceiling of the number (e.g., <code>ceiling(3.75)</code> is 4)</li>
   <li>The number rounded to 0 decimal places</li>
+  <li>The rounded number’s absolute value</li>
   <li>The factorial of the rounded number’s absolute value</li>
 </ol>
 
+<p>Think about how you can apply the concept of DRY coding (Don’t Repeat Yourself) to make your solution more concise.</p>
+
 <h2 id="stringpy">string.py</h2>
 
-<p>Write a program <code>string.py</code> that takes a string as input from the user and prints the string after performing the following two mangle operations:</p>
+<p>Write a program <code>string.py</code> that takes a string as input from the user and:</p>
 
-<ol>
-  <li>Swaps upper and lower case letters</li>
-  <li>Removes the third and third to last characters</li>
-</ol>
-
-<p>Finally, print only the middle 3 letters using the substring or splice operation (<code>[:]</code>).</p>
+<ul>
+  <li>Prints the string after performing the following two mangle operations:
+    <ol>
+      <li>Swaps upper and lower case letters</li>
+      <li>Removes the second and second to last characters</li>
+    </ol>
+  </li>
+  <li>Prints only the middle 3 letters of the string using the substring or splice operation (<code>[:]</code>)</li>
+</ul>
 
 <p>For example:</p>
 
@@ -170,13 +193,13 @@
   <tbody>
     <tr>
       <td style="text-align: center">Monty Python</td>
-      <td style="text-align: center">mOTY pYTON</td>
-      <td style="text-align: center">‘y P’</td>
+      <td style="text-align: center">mNTY pYTHN</td>
+      <td style="text-align: center">y P</td>
     </tr>
     <tr>
-      <td style="text-align: center">hello!</td>
-      <td style="text-align: center">HEO!</td>
-      <td style="text-align: center">‘ell’ or ‘llo’</td>
+      <td style="text-align: center">hello</td>
+      <td style="text-align: center">HLL</td>
+      <td style="text-align: center">ell</td>
     </tr>
     <tr>
       <td style="text-align: center">oh</td>
@@ -185,6 +208,26 @@
     </tr>
   </tbody>
 </table>
+
+<!--| **string** | **Mangled Output** | **Middle 3** |
+|:---:|:---:|:---:|
+| Monty Python | mOTY pYTON | 'y P' |
+| hello! | HEO! | 'ell' or 'llo' |
+| oh | OH | '' |-->
+
+<h2 id="madlibspy">madlibs.py</h2>
+
+<p>Create a program <code>madlibs.py</code> that takes at least 6 parts of speech from the user as input, and should include <strong><em>at least</em></strong> one of each of the following parts of speech:</p>
+
+<ul>
+  <li>Noun</li>
+  <li>Adjective</li>
+  <li>Verb</li>
+  <li>Verb past tense</li>
+  <li>Proper Name or Place or Animal</li>
+</ul>
+
+<p>Each submission should be unique. You should not depend on any external files or modules (i.e., no imports); your program should be self-contained. If you choose to make use of any online resources, please include the URL in your comments and a brief description of how you used the resource to guide your implementation.</p>
 
 <h2 id="submission">Submission</h2>
 
@@ -206,7 +249,7 @@
   <li>Make sure to name your zip file <code>project1_uLogin1.zip</code></li>
 </ul>
 
-<p>Upload your zip file to Google Classroom.</p>
+<p>Upload your zip file to Canvas.</p>
 
 <h2 id="hints">Hints</h2>
 <ul>
@@ -226,7 +269,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-07-06 08:49:07 -0400</span></p>
+       Last update on: <span>2016-07-07 09:23:07 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
