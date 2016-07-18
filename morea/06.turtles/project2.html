@@ -58,7 +58,7 @@
 
 <p><em>In the beginning of the semester we drew interesting shapes on code.org. In this project, we will use python’s <a href="https://docs.python.org/3.4/library/turtle.html">turtle module</a> to draw shapes both iteratively and recursively. In this project, we will use loops, functions, conditions, and variables to draw pictures with the python turtle package.</em></p>
 
-<!--***You must work with a partner (unless granted permission in advance)**; make sure both students are clearly identified in the comments at the top of each program.*-->
+<p><em><strong>You must work with a partner (unless granted permission in advance)</strong>; make sure both students are clearly identified in the comments at the top of each program.</em></p>
 
 <p>An important skill as a computer scientist is the ability to learn how to use an existing API library by reading documentation, finding good API usage examples on the internet, and adapting those examples to meet your needs. In this project, you will begin building these skills to help you make the transition from classroom to practice.</p>
 
@@ -85,6 +85,8 @@
 -->
 
 <h2 id="part-1-learn-how-to-work-with-turtles">Part 1: Learn how to work with turtles</h2>
+
+<p><strong><em>Note</em></strong>: This part should be submitted individually!</p>
 
 <h3 id="draw-a-line">1. Draw a line</h3>
 
@@ -135,9 +137,11 @@ turtle.Screen().exitonclick()
 
 <h3 id="submitting-part-1">Submitting Part 1</h3>
 
-<p>Once you’re satisfied that your program is working correctly, take a screen shot of your two squares code and the two squares display and submit it to Google classroom.</p>
+<p>Once you’re satisfied that your program is working correctly, take a screen shot of your two squares code and the two squares display and submit it to Canvas.</p>
 
 <h2 id="part-2-functions">Part 2: Functions</h2>
+
+<p><strong><em>Note</em></strong>: This part should be submitted as a team!</p>
 
 <p><strong><em>None of the following turtle programs should take user input!</em></strong></p>
 
@@ -149,19 +153,21 @@ turtle.Screen().exitonclick()
   <li><code>rectangle(width, height)</code>: takes the length of the width and height as parameters.</li>
   <li><code>square(side)</code>: takes the length of a side as a parameter. <strong>Implement this by calling the <code>rectangle</code> function</strong>.</li>
   <li><code>triangle(side)</code>: takes the length of a side as a parameter and draws an equilateral triangle.</li>
-  <li><code>decagon(side)</code>: takes the length of a side as a parameter and draws a decagon.</li>
+  <li><code>hexagon(side)</code>: takes the length of a side as a parameter and draws an hexagon.</li>
 </ol>
 
-<!--1.	`octagon(side)`: takes the length of a side as a parameter and draws an octagon.
+<!--
+1.	`octagon(side)`: takes the length of a side as a parameter and draws an octagon.
 1.	`hexagon(side)`: takes the length of a side as a parameter and draws an hexagon.
 1.	`pentagon(side)`: takes the length of a side as a parameter and draws an pentagon.
+1.	`decagon(side)`: takes the length of a side as a parameter and draws a decagon.
 -->
 
 <p>Test that your functions work by clearly drawing a square, rectangle, triangle, and decagon on the screen. They shouldn’t overlap too much. For example:</p>
 
 <p><img src="shapes.png" width="250" /></p>
 
-<p><strong><em>Every submitted picture should look unique for the whole project.</em></strong></p>
+<p><strong><em>Every submitted picture should look unique.</em></strong></p>
 
 <p>Remember to declare all your functions at the <strong><em>top</em></strong> of the file, <strong><em>before</em></strong> you call them.</p>
 
@@ -187,13 +193,6 @@ turtle.Screen().exitonclick()
 
 <p><strong><em>Hint</em></strong>: You can calculate the angle to turn your turtle by multiplying 360 by the number of points to skip, divided by the total number of points.</p>
 
-<!--You will need a different approach to drawing the stars depending on if there is an odd or even number of points.-->
-
-<!--***Hints***:
-
-- Implement the odd case first.  
-- How far should your turtle turn for an odd-pointed star? Twice as much as you did for the polygon version. -->
-
 <p>Here are some examples:</p>
 
 <p><img src="polygram.png" width="300" /></p>
@@ -206,19 +205,13 @@ turtle.Screen().exitonclick()
  
 Test that your function works by drawing at least an even- and odd-pointed star. You should have ***one*** function called `polygram` that is capable of drawing ***both*** even- & odd-pointed stars. However, feel free to delegate the responsibility of drawing odd- and even-pointed stars by writing separate functions ***called*** by `polygram`.-->
 
-<h3 id="submitting-part-2">Submitting Part 2</h3>
-
-<p>Once you’re satisfied that your programs are working correctly, take a screen shot of each program and the display when it’s run and submit it to Google classroom.</p>
-
-<h2 id="part-3-recursion">Part 3: Recursion</h2>
-
 <h3 id="spiralpy">spiral.py</h3>
 
-<p>Let’s explore recursion by writing a program <code>spiral.py</code> with the following functions:</p>
+<p>Write a program <code>spiral.py</code> with the following function:</p>
 
-<p><code>spiral(length, angle)</code>: takes the length of the spiral (<code>length</code>) and the angle of the spiral (<code>angle</code>) as parameters. <strong>Implement using recursion.</strong> Think about how the parameters change at each recursive step. Should either parameter stay the same? What’s the base case?</p>
+<p><code>spiral(length, angle)</code>: takes the length of the spiral (<code>length</code>) and the angle of the spiral (<code>angle</code>) as parameters. </p>
 
-<p><code>spiral_loop(length, angle)</code>: takes the length of the spiral (<code>length</code>) and the angle of the spiral (<code>angle</code>) as parameters. <strong>Implement using iteration.</strong> How should the loop change at each step/iteration?</p>
+<p>You must use either iteration (loops) or recursion (function that calls itself). Make sure the number of times your loop executes depends on the length parameter, and not a fixed number of times.</p>
 
 <p><img src="spiral.png" width="200" /></p>
 
@@ -226,39 +219,59 @@ Test that your function works by drawing at least an even- and odd-pointed star.
 
 <p>Test your functions by drawing two different spirals.</p>
 
-<h3 id="treepy">tree.py</h3>
+<!--### Submitting Part 2
 
-<p>Create a program <code>tree.py</code> that recursively draws a tree using the following function:</p>
+Once you're satisfied that your programs are working correctly, take a screen shot of each program and the display when it's run and submit it to Canvas.
 
-<pre><code>def tree(size, angle):
-	if size &gt; 2:
-		turtle.forward(size)
-		turtle.right(angle)
-		tree(size/2, angle)    # call A
-		turtle.left(2*angle)
-		tree(size/2, angle)    # call B
-		turtle.right(angle)
-		turtle.back(size)
+## Part 3: Recursion
 
-turtle.left(90)
-tree(200, 45)
-</code></pre>
+### spiral.py
 
-<p>Modify the above function so the output changes from this:</p>
+Let’s explore recursion by writing a program `spiral.py` with the following functions:
 
-<p><img src="tree1.png" width="200" /> to this: <img src="tree2.png" width="200" />  </p>
+`spiral(length, angle)`: takes the length of the spiral (`length`) and the angle of the spiral (`angle`) as parameters. **Implement using recursion.** Think about how the parameters change at each recursive step. Should either parameter stay the same? What’s the base case?
 
-<h3 id="fibonaccipy">fibonacci.py</h3>
+`spiral_loop(length, angle)`: takes the length of the spiral (`length`) and the angle of the spiral (`angle`) as parameters. **Implement using iteration.** How should the loop change at each step/iteration?
 
-<p>Our final recursive program does not make use of turtle. Instead, it will use recursion to calculate the <em>n<sup>th</sup></em> <a href="http://www.mathsisfun.com/numbers/fibonacci-sequence.html">fibonacci number</a>. A fibonacci number is calculated by adding the two numbers that come before it in the sequence. Think about what the recursive step will look like. Assume the sequence starts at 0 (for n = 0). How many base cases are need?</p>
+<img src="spiral.png" width="200">
 
-<p>Write a program <code>fibonacci.py</code> with the following functions:</p>
+***Every submitted picture should look unique.***
 
-<p><code>fibonacci(n)</code>: takes the fibonacci sequence number (<code>n</code>) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented recursively.</p>
+Test your functions by drawing two different spirals.
 
-<p><code>fibonacci_list(n)</code>: takes the fibonacci sequence number (<code>n</code>) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented iteratively using a list.</p>
+### tree.py
 
-<p>Test that your functions work by getting a number (<code>n</code>) <strong>as input from the user</strong> and printing the result of calling your fibonacci function. <strong>Note:</strong> this is the <strong><em>only</em></strong> program in this project that should take user input.</p>
+Create a program `tree.py` that recursively draws a tree using the following function:
+
+	def tree(size, angle):
+		if size > 2:
+			turtle.forward(size)
+			turtle.right(angle)
+			tree(size/2, angle)    # call A
+			turtle.left(2*angle)
+			tree(size/2, angle)    # call B
+			turtle.right(angle)
+			turtle.back(size)
+	
+	turtle.left(90)
+	tree(200, 45)
+
+Modify the above function so the output changes from this:
+
+<img src="tree1.png" width="200"> to this: <img src="tree2.png" width="200">  
+
+### fibonacci.py
+
+Our final recursive program does not make use of turtle. Instead, it will use recursion to calculate the *n<sup>th</sup>* [fibonacci number](http://www.mathsisfun.com/numbers/fibonacci-sequence.html). A fibonacci number is calculated by adding the two numbers that come before it in the sequence. Think about what the recursive step will look like. Assume the sequence starts at 0 (for n = 0). How many base cases are need?
+
+Write a program `fibonacci.py` with the following functions:
+
+`fibonacci(n)`: takes the fibonacci sequence number (`n`) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented recursively.
+
+`fibonacci_list(n)`: takes the fibonacci sequence number (`n`) as a parameter and returns the sum of the previous two terms in the sequence. This should be implemented iteratively using a list.
+
+Test that your functions work by getting a number (`n`) **as input from the user** and printing the result of calling your fibonacci function. **Note:** this is the ***only*** program in this project that should take user input.
+-->
 
 <h2 id="grading">Grading</h2>
 
@@ -274,18 +287,19 @@ tree(200, 45)
 
 <h2 id="submitting">Submitting</h2>
 
-<p>When complete, your project should include the following six python programs:</p>
+<p>When complete, your project should include the following four python programs:</p>
 
 <ul>
   <li><code>shapes.py</code></li>
   <li><code>polygon.py</code></li>
   <li><code>star_polygon.py</code></li>
   <li><code>spiral.py</code></li>
-  <li><code>tree.py</code></li>
-  <li><code>fibonacci.py</code></li>
 </ul>
 
-<p>Zip your project using the same steps as for the earlier project, giving the zip file the same name as your <code>project2_uLogin</code> folder name, and submit to google classroom.</p>
+<!--- `tree.py`
+- `fibonacci.py`-->
+
+<p>Zip your project using the same steps as for the earlier project, giving the zip file the same name as your <code>project2_uLogin</code> folder name, and submit to canvas.</p>
 
 </div>
 
@@ -300,7 +314,7 @@ tree(200, 45)
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-07-18 16:44:08 -0400</span></p>
+       Last update on: <span>2016-07-18 17:16:06 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
