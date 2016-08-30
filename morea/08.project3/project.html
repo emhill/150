@@ -86,7 +86,7 @@
 
 <p><img src="hmcOlinSmall.png" width="200" /> <img src="outOlin.png" width="200" /></p>
 
-<p>The <code>invert</code> function modifies an image to create its negative. That is, all color values are 255 minus their original value. Especially note the use of list comprehension in <code>invert</code>, which iterates over every pixel in the image and calls <code>change(rgb values)</code>. It’s easiest to also write greyscale and binarize in the same format: a main function that accepts user input and contains a list comprehension that calls a helper function, <code>change</code>, on each pixel. </p>
+<p>The <code>invert</code> function modifies an image to create its negative. That is, all color values are 255 minus their original value. Especially note the use of list comprehension in <code>invert</code>, which iterates over every pixel in the image and calls <code>change(rgb values)</code>. It’s easiest to also write greyscale and binarize in the same format: a main function that accepts user input and contains a list comprehension that calls a helper function, <code>change</code>, on each pixel.</p>
 
 <h2 id="playing-with-pixels">Playing with Pixels</h2>
 
@@ -107,7 +107,7 @@
 
 <ul>
   <li>Getting an <strong>OverflowError: unsigned byte integer is greater than maximum</strong>? This might be because your luminance calculation results in RGB values higher than 255. Make sure that all of your percentages add up to 1.</li>
-  <li>Getting a <strong>filename is not defined</strong> error? Make sure you have single quotes around the image name when you call it in Python shell, the image is in the same folder as your python script, and permissions on your image are correct. </li>
+  <li>Getting a <strong>filename is not defined</strong> error? Make sure you have single quotes around the image name when you call it in Python shell, the image is in the same folder as your python script, and permissions on your image are correct.</li>
 </ul>
 
 <h3 id="binarize">binarize</h3>
@@ -129,8 +129,8 @@
 <p><strong><em>Hints:</em></strong></p>
 
 <ul>
-  <li>In <code>flipVert</code>, you’ll want to iterate over only the rows instead of the pixels in <code>Im_pix</code> and reverse their order. </li>
-  <li>If <code>L</code> is a list, then <code>L[::-1]</code> is the reverse of that list. </li>
+  <li>In <code>flipVert</code>, you’ll want to iterate over only the rows instead of the pixels in <code>Im_pix</code> and reverse their order.</li>
+  <li>If <code>L</code> is a list, then <code>L[::-1]</code> is the reverse of that list.</li>
 </ul>
 
 <h3 id="fliphoriz">flipHoriz</h3>
@@ -144,7 +144,7 @@
 
 <h3 id="mirrorvert">mirrorVert</h3>
 
-<p>Write a function <code>mirrorVert</code> that mirrors the image across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). The easiest approach is to replace the bottom half of <code>Im_pix</code> with the reversed rows from the top half of <code>flipVert</code>. To do this, you’ll use the built-in function <code>getWH()</code> in <code>png_helper.py</code> to get the height of <code>Im_pix</code>. Keep in mind that <code>getWH()</code> returns a <em>list</em> of width &amp; height. You can assign both values to variables with something like <code>width, height = getWH()</code>. </p>
+<p>Write a function <code>mirrorVert</code> that mirrors the image across its horizontal axis (i.e., so that the top part is mirrored upside down on the bottom of the image). The easiest approach is to replace the bottom half of <code>Im_pix</code> with the reversed rows from the top half of <code>flipVert</code>. To do this, you’ll use the built-in function <code>getWH()</code> in <code>png_helper.py</code> to get the height of <code>Im_pix</code>. Keep in mind that <code>getWH()</code> returns a <em>list</em> of width &amp; height. You can assign both values to variables with something like <code>width, height = getWH()</code>.</p>
 
 <p><img src="in.png" /> <img src="mirrorV.png" /></p>
 
@@ -163,7 +163,7 @@
 
 <h3 id="scale">scale</h3>
 
-<p>Write a function <code>scale that</code> scales the image to half of each of its original dimensions (this will be a quarter of its original area). The easiest way to do this is to eliminate every other pixel in each row (scaling the image horizontally) <strong>and</strong> eliminate every other row (scaling the image vertically). </p>
+<p>Write a function <code>scale that</code> scales the image to half of each of its original dimensions (this will be a quarter of its original area). The easiest way to do this is to eliminate every other pixel in each row (scaling the image horizontally) <strong>and</strong> eliminate every other row (scaling the image vertically).</p>
 
 <h3 id="free-style">Free style</h3>
 
@@ -197,7 +197,7 @@
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: spacelab)<br>
-       Last update on: <span>2016-07-27 11:55:56 -0400</span></p>
+       Last update on: <span>2016-08-30 13:51:29 -0400</span></p>
     <p style="margin: 0">
       12 modules
       
